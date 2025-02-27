@@ -1,0 +1,59 @@
+html {
+  scroll-behavior: smooth;
+}
+#contact,
+#service,
+#about {
+  scroll-margin-top: 120px;
+}
+
+#home {
+  scroll-margin-top: 160px;
+}
+.link{
+  text-decoration: none;
+}
+
+* {
+  border-color: var(--border);
+}
+svg,
+img {
+  color: var(--svg); /* Hereda el color desde el texto */
+  fill: currentColor; /* Aplica el color dinámico */
+  transition: color 0.3s ease; /* Transición suave al cambiar de tema */
+  object-fit: contain;
+  display: block;
+}
+
+/* rgb(29, 29, 29)
+rgb(23, 23, 23)
+ rgb(10, 10, 10)
+rgb(255, 255, 255)
+rgb(203, 202, 195)
+rgb(7, 110, 183)
+rgb(56, 80, 129)
+ rgb(18, 43, 97)
+ rgb(14, 28, 71)
+rgb(17, 18, 67)
+rgb(5, 12, 31) */
+
+/* Inicialización del texto */
+.texto {
+  font-size: 24px;
+  font-weight: bold;
+  position: relative;
+  opacity: 0; /* El texto comienza invisible */
+  transform: translateX(
+    100%
+  ); /* El texto comienza fuera de la pantalla, hacia la derecha */
+  filter: blur(10px); /* El texto comienza con un desenfoque */
+  transition: opacity 1s ease-out, transform 1s ease-out, filter 1s ease-out;
+}
+
+/* Animación cuando se aplica la clase */
+.texto.aparecer {
+  opacity: 1;
+  transform: translateX(0); /* El texto se desliza hacia su posición original */
+  filter: blur(0); /* El texto pierde el desenfoque */
+}

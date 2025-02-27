@@ -1,0 +1,12 @@
+.circle {
+  width: 1000px;  /* Tamaño del círculo */
+  height: 400px;  /* Tamaño del círculo */
+  border-radius: 50%; 
+  background: linear-gradient(135deg, #111243 100%, #111243 100%);  /* Un degradado suave */
+  filter: blur(50px);  /* Suaviza el desenfoque */
+  position: absolute;  /* Hace que puedas posicionarlo en cualquier lugar */
+  top: 50%;  /* Centra el círculo verticalmente */
+  left: 50%;  /* Centra el círculo horizontalmente */
+  transform: translate(-50%, -50%);  /* Ajusta la posición para que quede exactamente centrado */
+  z-index: -1;  /* Asegura que el círculo esté detrás de otros elementos */
+}
