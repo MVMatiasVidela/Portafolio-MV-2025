@@ -45,11 +45,9 @@ const Hero: React.FC = () => {
           <Box sx={{ gap: '100px', display: 'flex', flexDirection: 'column' }}>
             <Box>
               <Box>
-                <Typography variant="h1">
-                  Hola, soy{' '}
-                  <span className="bg-gradient-to-r from-Fblue-100 to-Fblue-200 bg-clip-text text-transparent font-bold">
-                    Matías Videla
-                  </span>{' '}
+                <Typography variant="h1" sx={{fontSize:{desktop:'48px', mobile:'20px'}}}>
+                  Hola, soy Matias Videla
+                
                 </Typography>
               </Box>
               <Box className="texto" id="miTexto">
