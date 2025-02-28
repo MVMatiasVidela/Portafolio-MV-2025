@@ -3,10 +3,12 @@ import Hero from './hero/Hero';
 import About from './about/About';
 import Contact from './contact/Contact';
 import ProyectsHome from './proyects/ProyectsHome';
+import Circle1 from '@/components/secondary/circles/circles1/Circle1';
+import { Box } from '@mui/material';
 
 const Index = () => {
   return (
-    <div>
+    <Box sx={{position:'relative'}}>
       {/* <Box
         sx={{
           position: 'absolute',
@@ -26,7 +28,11 @@ const Index = () => {
       <About></About>
       <ProyectsHome></ProyectsHome>
       <Contact></Contact>
-    </div>
+      <Box sx={{position:'absolute', top:'1600px', left:'700px', zIndex:-50}}>
+
+      <Circle1></Circle1>
+      </Box>
+    </Box>
   );
 };
 

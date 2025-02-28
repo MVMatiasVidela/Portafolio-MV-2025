@@ -34,7 +34,8 @@ const Hero: React.FC = () => {
       <Box
         id="home"
         sx={{
-          display: 'flex',
+          display: 'flex', // Siempre será flex
+          flexDirection: { mobile: 'column', laptop: 'column', desktop:'row' }, // En móvil y tablet será column, en laptop y desktop será row
           paddingY: '150px',
           paddingX: '100px',
         }}
@@ -71,12 +72,12 @@ const Hero: React.FC = () => {
             </Link>
           </Box>
         </Box>
-        <Box sx={{display:'flex',}}>
+        <Box sx={{ display: 'flex' }}>
           <Image
-            src="https://res.cloudinary.com/dkobjvdgn/image/upload/v1736195640/Group_48095598_1_qy1mu3.png"
+            src="https://res.cloudinary.com/dseutp7hi/image/upload/v1740754996/Group_11_n8dmow.png"
             alt="Imagen"
             width={400}
-            height={350}
+            height={400}
           />
         </Box>
       </Box>

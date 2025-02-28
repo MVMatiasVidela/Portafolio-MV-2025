@@ -185,9 +185,9 @@ export const darkTheme = createTheme({
 
   breakpoints: {
     values: {
-      laptop: 1024,
-      tablet: 640,
       mobile: 0,
+      tablet: 640,
+      laptop: 1024,
       desktop: 1280,
     },
   },
