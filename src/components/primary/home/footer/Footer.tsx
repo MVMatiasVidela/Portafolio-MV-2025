@@ -7,20 +7,16 @@ const Footer = () => {
     <Box
       sx={{
         display: 'flex',
-       
-       
+        flexDirection: { mobile: 'column', laptop: 'column', desktop: 'row' },
+
         justifyContent: 'space-between',
         alignItems: 'center',
         paddingX: '48px',
-       
-      
       }}
     >
-      <Box
-      >
-        <Typography variant='h6'>
-
-        &copy; 2025 / Matías Videla / Portafolio
+      <Box>
+        <Typography variant="h6">
+          &copy; 2025 / Matías Videla / Portafolio
         </Typography>
       </Box>
       <Box

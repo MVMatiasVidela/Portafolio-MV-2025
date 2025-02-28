@@ -32,6 +32,7 @@ const Hero: React.FC = () => {
           paddingTop: '150px',
           paddingX: '100px',
           justifyContent: 'center',
+          alignContent:'center'
         }}
       >
         <Box

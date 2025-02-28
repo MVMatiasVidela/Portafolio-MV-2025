@@ -9,6 +9,7 @@ const About = () => {
       id="about"
       sx={{
         display: 'flex',
+        flexDirection: { mobile: 'column', laptop: 'column', desktop: 'row' },
         justifyContent: 'center',
         alignItems: 'center',
         paddingX: '100px',
@@ -35,7 +36,7 @@ const About = () => {
           detalle esté orientado a potenciar tanto la experiencia del usuario
           como los resultados comerciales.
         </Typography>
-        <Button variant="contained" sx={{background:''}}>
+        <Button variant="contained" sx={{ background: '' }}>
           <Image
             alt="Image"
             src="https://res.cloudinary.com/dseutp7hi/image/upload/v1729352638/Dise%C3%B1o_sin_xzdfgt%C3%ADtulo_pczp1e.png"
