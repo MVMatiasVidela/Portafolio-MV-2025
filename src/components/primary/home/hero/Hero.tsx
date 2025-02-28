@@ -6,13 +6,6 @@ import { JSX } from 'react';
 import ReactDOMServer from 'react-dom/server';
 import { useTheme } from '@mui/material/styles';
 import Image from 'next/image';
-// import Link from 'next/link';
-
-// Función para convertir el componente SVG a Data URI
-const svgToDataUri = (svg: JSX.Element): string => {
-  const svgString = ReactDOMServer.renderToStaticMarkup(svg);
-  return `data:image/svg+xml;base64,${btoa(svgString)}`;
-};
 
 const Hero: React.FC = () => {
   const theme = useTheme();
@@ -24,7 +17,7 @@ const Hero: React.FC = () => {
   return (
     <Box
       sx={{
-        backgroundImage: `url(${svgToDataUri(<Desktop />)})`,
+        backgroundImage: `url(https://res.cloudinary.com/dseutp7hi/image/upload/v1740767851/Group_48095605_2_ccgeen.png)`,
         backgroundSize: 'cover', // Asegura que la imagen cubra toda la pantalla
         backgroundPosition: 'center', // Centra la imagen
         backgroundRepeat: 'no-repeat', // Evita que la imagen se repita
@@ -35,9 +28,10 @@ const Hero: React.FC = () => {
         id="home"
         sx={{
           display: 'flex', // Siempre será flex
-          flexDirection: { mobile: 'column', laptop: 'column', desktop:'row' }, // En móvil y tablet será column, en laptop y desktop será row
-          paddingY: '150px',
+          flexDirection: { mobile: 'column', laptop: 'column', desktop: 'row' }, // En móvil y tablet será column, en laptop y desktop será row
+          paddingTop: '150px',
           paddingX: '100px',
+          justifyContent: 'center',
         }}
       >
         <Box
@@ -48,33 +42,35 @@ const Hero: React.FC = () => {
             gap: '8px',
           }}
         >
-          <div>
-            <div>
-              <Typography variant="h1">
-                Hola, soy{' '}
-                <span className="bg-gradient-to-r from-Fblue-100 to-Fblue-200 bg-clip-text text-transparent font-bold">
-                  Matías Videla
-                </span>{' '}
-              </Typography>
-            </div>
-          </div>
-          <Box className="texto" id="miTexto">
-            <Typography className="text-[20px] text-[#89ABD1] font-medium">
-              Soy desarrollador frontend y apasionado por el mundo IT
-            </Typography>
-          </Box>
-          <Box sx={{ display: 'flex', gap: '12px' }}>
-            <Link href="" underline="none">
-              <Button variant="contained">Contáctame</Button>
-            </Link>
-            <Link href="" underline="none">
-              <Button variant="contained">Descargar CV</Button>
-            </Link>
+          <Box sx={{ gap: '100px', display: 'flex', flexDirection: 'column' }}>
+            <Box>
+              <Box>
+                <Typography variant="h1">
+                  Hola, soy{' '}
+                  <span className="bg-gradient-to-r from-Fblue-100 to-Fblue-200 bg-clip-text text-transparent font-bold">
+                    Matías Videla
+                  </span>{' '}
+                </Typography>
+              </Box>
+              <Box className="texto" id="miTexto">
+                <Typography className="text-[20px] text-[#89ABD1] font-medium">
+                  Soy desarrollador frontend y apasionado por el mundo IT
+                </Typography>
+              </Box>
+            </Box>
+            <Box sx={{ display: 'flex', gap: '12px' }}>
+              <Link href="" underline="none">
+                <Button variant="contained">Contáctame</Button>
+              </Link>
+              <Link href="" underline="none">
+                <Button variant="contained">Descargar CV</Button>
+              </Link>
+            </Box>
           </Box>
         </Box>
         <Box sx={{ display: 'flex' }}>
           <Image
-            src="https://res.cloudinary.com/dseutp7hi/image/upload/v1740754996/Group_11_n8dmow.png"
+            src="https://res.cloudinary.com/dseutp7hi/image/upload/v1740767710/Group_12_2_yeu7hg.png"
             alt="Imagen"
             width={400}
             height={400}

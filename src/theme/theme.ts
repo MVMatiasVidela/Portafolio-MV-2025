@@ -26,58 +26,49 @@ export const lightTheme = createTheme({
     fontFamily: poppins.style.fontFamily,
 
     h1: {
-     
-      fontSize: '50px',
+      fontSize: '48px',
       fontWeight: 'bold',
     },
     h2: {
-     
       fontWeight: 'bold',
       fontSize: '40px',
     },
     h3: {
-      
       fontWeight: 'bold',
-      fontSize: '40px',
+      fontSize: '32px',
     },
     h4: {
-    
       fontWeight: 'bold',
-      fontSize: '40px',
+      fontSize: '28px',
     },
     h5: {
-     
-      fontWeight: 'bold',
-      fontSize: '40px',
+      fontWeight: '400',
+      fontSize: '20px',
     },
     h6: {
-      fontWeight: '600',
+      fontWeight: '400',
       fontSize: '16px',
     },
     body1: {
-      fontWeight: 'normal',
+      fontWeight: '400',
       fontSize: '20px',
     },
     body2: {
-      fontWeight: 'normal',
+      fontWeight: '400',
       fontSize: '16px',
     },
     button: {
       fontWeight: '600',
-      fontSize: '14px',
+      fontSize: '16px',
       textTransform: 'capitalize',
     },
     caption1: {
       fontWeight: '600',
-      fontSize: '14px',
+      fontSize: '16px',
     },
     caption2: {
       fontWeight: 'normal',
       fontSize: '14px',
-    },
-    caption3: {
-      fontWeight: '300',
-      fontSize: '15px',
     },
   },
   components: {
@@ -86,8 +77,6 @@ export const lightTheme = createTheme({
         root: {
           borderRadius: 40,
           padding: '12px 24px',
-          fontWeight: '500',
-          fontSize: '14px',
         },
       },
     },
@@ -122,6 +111,7 @@ export const darkTheme = createTheme({
     background: {
       default: '#030712',
     },
+   
   },
 
   typography: {
@@ -140,46 +130,42 @@ export const darkTheme = createTheme({
     h3: {
      
       fontWeight: 'bold',
-      fontSize: '40px',
+      fontSize: '32px',
     },
     h4: {
      
       fontWeight: 'bold',
-      fontSize: '40px',
+      fontSize: '28px',
     },
     h5: {
       
-      fontWeight: 'bold',
-      fontSize: '40px',
+      fontWeight: '400',
+      fontSize: '20px',
     },
     h6: {
-      fontWeight: '600',
+      fontWeight: '400',
       fontSize: '16px',
     },
     body1: {
-      fontWeight: 'normal',
+      fontWeight: '400',
       fontSize: '20px',
     },
     body2: {
-      fontWeight: 'normal',
+      fontWeight: '400',
       fontSize: '16px',
     },
     button: {
       fontWeight: '600',
-      fontSize: '14px',
+      fontSize: '16px',
       textTransform: 'capitalize',
     },
     caption1: {
       fontWeight: '600',
-      fontSize: '14px',
+      fontSize: '16px',
     },
     caption2: {
       fontWeight: 'normal',
       fontSize: '14px',
-    },
-    caption3: {
-      fontWeight: '300',
-      fontSize: '15px',
     },
   },
 
@@ -192,7 +178,6 @@ export const darkTheme = createTheme({
     },
   },
 
-  spacing: 8,
 
   components: {
     MuiButton: {
@@ -200,8 +185,7 @@ export const darkTheme = createTheme({
         root: {
           borderRadius: 40,
           padding: '12px 24px',
-          fontWeight: '500',
-          fontSize: '14px',
+
         },
       },
     },

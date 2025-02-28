@@ -28,10 +28,7 @@ const Index = () => {
       <About></About>
       <ProyectsHome></ProyectsHome>
       <Contact></Contact>
-      <Box sx={{position:'absolute', top:'1600px', left:'700px', zIndex:-50}}>
-
-      <Circle1></Circle1>
-      </Box>
+     
     </Box>
   );
 };

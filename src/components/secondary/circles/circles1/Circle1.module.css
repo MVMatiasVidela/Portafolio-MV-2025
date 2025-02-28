@@ -2,7 +2,7 @@
   width: 400px;  /* Tamaño del círculo */
   height: 400px;  /* Tamaño del círculo */
   border-radius: 50%; 
-  background: linear-gradient(135deg, #D4E6FD 50%, #D4E6FD 80%);  /* Un degradado suave */
+  background: linear-gradient(135deg, #091737 20%, #091737 80%);  /* Un degradado suave */
   filter: blur(250px);  /* Suaviza el desenfoque */
   transform: translate(-50%, -50%);  /* Ajusta la posición para que quede exactamente centrado */
  

@@ -33,7 +33,7 @@ const Navbar: React.FC<NavbarProps> = ({ toggleTheme, isDarkMode }) => {
     <Box
       sx={{
         backgroundColor: 'transparent',
-        zIndex: 50,
+        zIndex: 10,
         position: 'fixed',
         top: 0,
         width: '100%',
