@@ -140,9 +140,9 @@ const Navbar: React.FC<NavbarProps> = ({ toggleTheme, isDarkMode }) => {
 
           <List>
             {[
-              { text: 'Inicio', href: '#home' },
-              { text: 'Sobre mí', href: '#services' },
-              { text: 'Proyectos', href: '#about' },
+              { text: 'Inicio', href: '/' },
+              { text: 'Sobre mí', href: '/about' },
+              { text: 'Proyectos', href: '/proyects' },
             ].map(item => (
               <ListItem
                 key={item.text}
