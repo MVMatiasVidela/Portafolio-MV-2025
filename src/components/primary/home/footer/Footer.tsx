@@ -5,6 +5,7 @@ import GitHubIcon from '@mui/icons-material/GitHub';
 import YouTubeIcon from '@mui/icons-material/YouTube';
 import EmailIcon from '@mui/icons-material/Email';
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
+import Foot from '@/assets/svg/Footer.svg';
 
 const Footer = () => {
   return (
@@ -16,7 +17,8 @@ const Footer = () => {
         alignItems: 'center',
         paddingX: { mobile: '24px', tablet: '48px', laptop: '48px' },
         paddingY: '24px',
-        borderTop: '1px solid #282F3C', // Separador superior
+        position: 'relative',
+       
       }}
     >
       <Box>
@@ -28,7 +30,9 @@ const Footer = () => {
         </Typography>
       </Box>
 
-      <Box sx={{ display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
+      <Box
+        sx={{ display: 'flex', justifyContent: 'center', alignItems: 'center' }}
+      >
         <Image
           src="https://res.cloudinary.com/dseutp7hi/image/upload/v1740584411/Group_5_2_l3a3uv.png"
           alt="Logo"
@@ -36,11 +40,25 @@ const Footer = () => {
           height={50}
         />
       </Box>
-      <Box sx={{display:'flex', gap:'12px'}}>
-<EmailIcon></EmailIcon>
-<LinkedInIcon></LinkedInIcon>
-<GitHubIcon></GitHubIcon>
-<YouTubeIcon></YouTubeIcon>
+
+      <Box sx={{ display: 'flex', gap: '12px' }}>
+        <EmailIcon />
+        <LinkedInIcon />
+        <GitHubIcon />
+        <YouTubeIcon />
+      </Box>
+
+      <Box
+        sx={{
+          position: 'absolute',
+          zIndex: -50,
+          bottom: 0,
+          left: 0,
+          width: '100%',
+         
+        }}
+      >
+        <Foot style={{ width: '100%',  }} />
       </Box>
     </Box>
   );

@@ -1,3 +1,4 @@
+import Circles3 from '@/components/secondary/circles/circles3/Circles3';
 import { Box, Button, Link, Typography } from '@mui/material';
 
 const Contact = () => {
@@ -9,8 +10,20 @@ const Contact = () => {
         paddingX: { mobile: '20px', tablet: '50px', laptop: '100px' },
         display: 'flex',
         justifyContent: 'center',
+        position: 'relative',
+        
       }}
     >
+      <Box
+        sx={{
+          position: 'absolute',
+          top: '-200px',
+          right: '0px',
+          zIndex: -1,
+        }}
+      >
+        <Circles3 />
+      </Box>
       <Box
         sx={{
           display: 'flex',

@@ -5,6 +5,7 @@ import { Box, Button, Link, Typography } from '@mui/material';
 import { useTheme } from '@mui/material/styles';
 import Image from 'next/image';
 
+
 const Hero: React.FC = () => {
   const theme = useTheme();
 
@@ -67,7 +68,7 @@ const Hero: React.FC = () => {
               fontWeight: 'bold',
             }}
           >
-            Hola, soy Matias Videla
+            Hola! soy Matías Videla
           </Typography>
 
           <Box className="texto" id="miTexto">
@@ -82,7 +83,7 @@ const Hero: React.FC = () => {
                 color: 'text.secondary',
               }}
             >
-              Soy desarrollador frontend y apasionado por el mundo IT
+              Soy desarrollador frontend, apasionado por el mundo IT
             </Typography>
           </Box>
 
@@ -114,6 +115,7 @@ const Hero: React.FC = () => {
                 Descargar CV
               </Button>
             </Link>
+        
           </Box>
         </Box>
 

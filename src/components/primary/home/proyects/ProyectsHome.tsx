@@ -56,8 +56,7 @@ export default function ProyectsHome() {
         sx={{
           position: 'absolute',
           top: '100px',
-          left: '50%',
-          transform: 'translateX(-50%)',
+          left: '50px',
           zIndex: -1,
         }}
       >
@@ -114,7 +113,7 @@ export default function ProyectsHome() {
             <Grid2 size={6} key={index}>
               <Item>
                 {/* Círculo decorativo independiente en cada tarjeta */}
-                <Box
+                {/* <Box
                   sx={{
                     position: 'absolute',
                     top: '80%',
@@ -123,7 +122,7 @@ export default function ProyectsHome() {
                   }}
                 >
                   <CircleComponent />
-                </Box>
+                </Box> */}
 
                 {/* Icono del proyecto */}
                 {/* <CardMedia

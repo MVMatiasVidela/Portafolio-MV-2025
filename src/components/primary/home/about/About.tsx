@@ -2,11 +2,12 @@
 import { Box, Button, CardMedia, Typography } from '@mui/material';
 import Image from 'next/image';
 import ArrowOutwardIcon from '@mui/icons-material/ArrowOutward';
+import Object2 from '@/assets/svg/Object2.svg'
+import Circle2 from '@/components/secondary/circles/circles2/Circle2';
 
 const About = () => {
   return (
     <Box
-      id="about"
       sx={{
         display: 'flex',
         flexDirection: { mobile: 'column', desktop: 'row' }, // Columna en mobile, fila en desktop
@@ -25,20 +26,12 @@ const About = () => {
           desktop: '200px',
         },
         gap: { mobile: '24px', tablet: '36px' },
+        position:'relative'
       }}
     >
       {/* Imagen */}
       <Box sx={{ display: 'flex', justifyContent: 'center' }}>
-        <CardMedia
-          component="img"
-          image="https://res.cloudinary.com/dseutp7hi/image/upload/v1740763122/OBJECTS_1_ibknnc.png"
-          alt="Descripción"
-          sx={{
-            maxWidth: '100%',
-            width: { mobile: '300px', tablet: '400px', laptop: '450px' },
-            height: 'auto',
-          }}
-        />
+        <Object2 />
       </Box>
 
       {/* Texto */}
@@ -49,12 +42,12 @@ const About = () => {
         }}
       >
         <Typography
-          variant="h2"
+       
           sx={{
             fontSize: {
               mobile: '24px',
               tablet: '32px',
-              laptop: '40px',
+              laptop: '20px',
               desktop: '48px',
             },
           }}
@@ -63,12 +56,12 @@ const About = () => {
         </Typography>
 
         <Typography
-          variant="h6"
+
           sx={{
             fontSize: {
               mobile: '14px',
               tablet: '16px',
-              laptop: '18px',
+              laptop: '10px',
               desktop: '20px',
             },
             color: 'text.secondary',
@@ -95,15 +88,28 @@ const About = () => {
             width: { mobile: '100%', tablet: 'auto' },
           }}
         >
+          <Box sx={{borderRadius:'100px'}}>
+
           <Image
             alt="Image"
             src="https://res.cloudinary.com/dseutp7hi/image/upload/v1729352638/Dise%C3%B1o_sin_xzdfgt%C3%ADtulo_pczp1e.png"
             height={35}
             width={35}
           />
+          </Box>
           Acerca de mí
           <ArrowOutwardIcon fontSize="small" />
         </Button>
+      </Box>
+      <Box
+        sx={{
+          position: 'absolute',
+          top: '250px',
+          left: '0px',
+          zIndex: -1,
+        }}
+      >
+        <Circle2 />
       </Box>
     </Box>
   );

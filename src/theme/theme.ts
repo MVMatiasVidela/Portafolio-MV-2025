@@ -71,6 +71,14 @@ export const lightTheme = createTheme({
       fontSize: '14px',
     },
   },
+  breakpoints: {
+    values: {
+      mobile: 0,
+      tablet: 640,
+      laptop: 1024,
+      desktop: 1280,
+    },
+  },
   components: {
     MuiButton: {
       styleOverrides: {

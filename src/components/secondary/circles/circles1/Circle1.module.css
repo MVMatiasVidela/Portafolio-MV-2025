@@ -1,9 +1,8 @@
 .circle {
-  width: 400px;  /* Tamaño del círculo */
-  height: 400px;  /* Tamaño del círculo */
+  width: 500px;  /* Tamaño del círculo */
+  height: 500px;  /* Tamaño del círculo */
   border-radius: 50%; 
   background: linear-gradient(135deg, #091737 20%, #091737 80%);  /* Un degradado suave */
-  filter: blur(250px);  /* Suaviza el desenfoque */
-  transform: translate(-50%, -50%);  /* Ajusta la posición para que quede exactamente centrado */
+  filter: blur(150px);  /* Suaviza el desenfoque */
  
 }

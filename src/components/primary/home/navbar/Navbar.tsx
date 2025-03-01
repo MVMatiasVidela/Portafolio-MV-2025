@@ -4,7 +4,6 @@ import {
   Box,
   Button,
   IconButton,
-  Link,
   Typography,
   Drawer,
   List,
@@ -16,6 +15,7 @@ import MenuIcon from '@mui/icons-material/Menu';
 import CloseIcon from '@mui/icons-material/Close';
 import LightModeIcon from '@mui/icons-material/LightMode';
 import DarkModeIcon from '@mui/icons-material/DarkMode';
+import Link from 'next/link';
 
 interface NavbarProps {
   toggleTheme: () => void;
@@ -81,23 +81,22 @@ const Navbar: React.FC<NavbarProps> = ({ toggleTheme, isDarkMode }) => {
             color: 'white',
           }}
         >
-          <Link href="#home" underline="none">
+          <Link href="/" className="link">
             <Typography variant="body1" sx={{ color: '#D4E6FD' }}>
               Inicio
             </Typography>
           </Link>
-          <Link href="#services" underline="none">
+          <Link href="/about" className="link">
             <Typography variant="body1" sx={{ color: '#D4E6FD' }}>
               Sobre mí
             </Typography>
           </Link>
-          <Link href="#about" underline="none">
+          <Link href="#about" className="link">
             <Typography variant="body1" sx={{ color: '#D4E6FD' }}>
               Proyectos
             </Typography>
           </Link>
         </Box>
-
 
         {/* Botón de cambio de tema */}
         <IconButton onClick={toggleTheme} color="inherit">
