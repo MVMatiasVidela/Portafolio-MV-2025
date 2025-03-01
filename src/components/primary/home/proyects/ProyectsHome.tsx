@@ -1,8 +1,12 @@
 'use client';
-import { Box, Button, CardMedia, Grid, Grid2, Paper, Typography } from '@mui/material';
+import { Box, Button, CardMedia, Grid, Grid2, Link, Paper, Typography } from '@mui/material';
 import { styled } from '@mui/material/styles';
 import Circle1 from '@/components/secondary/circles/circles1/Circle1';
-import Circles2 from '@/components/secondary/circles/circles2/Circles2';
+import CirclePampa from '@/components/secondary/circles/CirclesProyects/CirclesPampa/CirclePampa';
+import Circles2 from '@/components/secondary/circles/CirclesProyects/CirclesDentall/CircleDentAll';
+import CircleDentAll from '@/components/secondary/circles/CirclesProyects/CirclesDentall/CircleDentAll';
+import CircleIMania from '@/components/secondary/circles/CirclesProyects/CirclesIMania/CirclesIMania';
+import CircleServismart from '@/components/secondary/circles/CirclesProyects/CirclesServismart/CircleServismart';
 
 // Estilo del Card
 const Item = styled(Paper)(({ theme }) => ({
@@ -10,7 +14,7 @@ const Item = styled(Paper)(({ theme }) => ({
   display: 'flex',
   flexDirection: 'column',
   gap: '16px',
-  padding: '20px',
+  padding: '30px',
   backgroundColor: 'transparent',
   borderRadius: '10px',
   border: '1px solid #282F3C',
@@ -25,12 +29,13 @@ const Item = styled(Paper)(({ theme }) => ({
     transition: 'backdrop-filter 0.3s ease-in-out',
   },
   '&:hover': {
-    borderColor: '#4A90E2',
     '&::before': {
       backdropFilter: 'blur(20px)',
     },
   },
 }));
+
+const circleComponents = [CircleDentAll, CircleIMania , CirclePampa, CircleServismart];
 
 export default function ProyectsHome() {
   return (
@@ -74,94 +79,101 @@ export default function ProyectsHome() {
       <Grid2 container spacing={3} sx={{ width: '100%', maxWidth: '1400px' }}>
         {[
           {
-            title: 'Plataforma de gestión de citas para clínicas dentales',
-            icon: 'https://res.cloudinary.com/dseutp7hi/image/upload/v1739825083/Group_48095596_agboa9.png',
+            title: 'DentAll',
+            description:
+              'Plataforma de gestión de citas para clínicas dentales',
+            icon: '',
             image:
-              'https://res.cloudinary.com/dseutp7hi/image/upload/v1738783628/Captura_de_pantalla_2025-02-05_202635_sw3epn.png',
+              'https://res.cloudinary.com/dseutp7hi/image/upload/v1740824794/dental_fbfflq.png',
           },
           {
-            title: 'Plataforma E-Commerce para venta de productos Apple',
-            icon: 'https://res.cloudinary.com/dseutp7hi/image/upload/v1731161078/Leonardo_Phoenix_A_dreamy_bokeh_effect_photography_featuring_a_2-removebg-preview_wmjweq.png',
+            title: 'IMania',
+            description: 'Plataforma E-Commerce para venta de productos Apple',
+            icon: '',
             image:
-              'https://res.cloudinary.com/dseutp7hi/image/upload/v1738785597/Captura_de_pantalla_2025-02-05_205931_w7cdxv.png',
+              'https://res.cloudinary.com/dseutp7hi/image/upload/v1740824793/imania_nhi1us.png',
           },
           {
-            title: 'E-Commerce para venta de sellos decorativos',
-            icon: 'https://res.cloudinary.com/dseutp7hi/image/upload/v1739825253/Frame_1_wpeesv.png',
+            title: 'Pampa',
+            description: 'E-Commerce para venta de sellos decorativos',
+            icon: '',
             image:
-              'https://res.cloudinary.com/dseutp7hi/image/upload/v1738778468/Landing_page_2_a1pgtx.png',
+              'https://res.cloudinary.com/dseutp7hi/image/upload/v1740825098/pampa_yxouqk.png',
           },
           {
-            title: 'Plataforma de gestión de licitaciones',
-            icon: 'https://res.cloudinary.com/dseutp7hi/image/upload/v1738778706/Logo_1_t1xfav.png',
+            title: 'Servismart',
+            description: 'Plataforma de gestión de licitaciones',
+            icon: '',
             image:
-              'https://res.cloudinary.com/dseutp7hi/image/upload/v1738777869/Header_rpt4fl.png',
+              'https://res.cloudinary.com/dseutp7hi/image/upload/v1740824794/Header_rpt4fl_hreq2e.png',
           },
-          {
-            title: 'Plataforma de gestión de licitaciones',
-            icon: 'https://res.cloudinary.com/dseutp7hi/image/upload/v1738778706/Logo_1_t1xfav.png',
-            image:
-              'https://res.cloudinary.com/dseutp7hi/image/upload/v1738777869/Header_rpt4fl.png',
-          },
-          {
-            title: 'Plataforma de gestión de licitaciones',
-            icon: 'https://res.cloudinary.com/dseutp7hi/image/upload/v1738778706/Logo_1_t1xfav.png',
-            image:
-              'https://res.cloudinary.com/dseutp7hi/image/upload/v1738777869/Header_rpt4fl.png',
-          },
-        ].map((project, index) => (
-          <Grid2 size={6} key={index}>
-            <Item>
-              {/* Circulo decorativo en cada card */}
-              <Box
-                sx={{
-                  position: 'absolute',
-                  top: '80%',
-                  left: '80%',
-                  zIndex: -10,
-                }}
-              >
-                <Circles2 />
-              </Box>
+        ].map((project, index) => {
+          const CircleComponent =
+            circleComponents[index % circleComponents.length];
+          return (
+            <Grid2 size={6} key={index}>
+              <Item>
+                {/* Círculo decorativo independiente en cada tarjeta */}
+                <Box
+                  sx={{
+                    position: 'absolute',
+                    top: '80%',
+                    left: '80%',
+                    zIndex: -10,
+                  }}
+                >
+                  <CircleComponent />
+                </Box>
 
-              {/* Icono del proyecto */}
-              <CardMedia
-                component="img"
-                image={project.icon}
-                alt="Icono"
-                sx={{ width: '80px' }}
-              />
+                {/* Icono del proyecto */}
+                {/* <CardMedia
+                  component="img"
+                  image={project.icon}
+                  alt="Icono"
+                  sx={{ width: '80px' }}
+                /> */}
 
-              {/* Nombre del proyecto */}
-              <Typography
-                variant="h6"
-                sx={{
-                  textAlign: 'center',
-                  fontSize: { mobile: '14px', tablet: '16px' },
-                }}
-              >
-                {project.title}
-              </Typography>
+               <Box>
 
-              {/* Imagen del proyecto */}
-              <CardMedia
-                component="img"
-                image={project.image}
-                alt="Proyecto"
-                sx={{ borderRadius: '5px' }}
-              />
-            </Item>
-          </Grid2>
-        ))}
+                <Typography
+                  variant="h2"
+                  sx={{
+                   
+                    fontSize: { mobile: '14px', tablet: '16px' },
+                  }}
+                >
+                  {project.title}
+                </Typography>
+                <Typography
+                  variant="h6"
+                  sx={{
+                    
+                    fontSize: { mobile: '14px', tablet: '16px' },
+                  }}
+                >
+                  {project.description}
+                </Typography>
+               </Box>
+
+                {/* Imagen del proyecto */}
+                <CardMedia
+                  component="img"
+                  image={project.image}
+                  alt="Proyecto"
+                  sx={{ borderRadius: '5px' }}
+                />
+              </Item>
+            </Grid2>
+          );
+        })}
       </Grid2>
 
       {/* Botón de Ver Todos */}
-      <Button
-        variant="contained"
+      <Link
         sx={{ marginTop: '32px', fontSize: { mobile: '14px', tablet: '16px' } }}
       >
         Ver todos los proyectos
-      </Button>
+      </Link>
     </Box>
   );
 }

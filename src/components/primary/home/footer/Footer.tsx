@@ -1,6 +1,10 @@
 import { Box, Typography } from '@mui/material';
 import Image from 'next/image';
 import React from 'react';
+import GitHubIcon from '@mui/icons-material/GitHub';
+import YouTubeIcon from '@mui/icons-material/YouTube';
+import EmailIcon from '@mui/icons-material/Email';
+import LinkedInIcon from '@mui/icons-material/LinkedIn';
 
 const Footer = () => {
   return (
@@ -31,6 +35,12 @@ const Footer = () => {
           width={200}
           height={50}
         />
+      </Box>
+      <Box sx={{display:'flex', gap:'12px'}}>
+<EmailIcon></EmailIcon>
+<LinkedInIcon></LinkedInIcon>
+<GitHubIcon></GitHubIcon>
+<YouTubeIcon></YouTubeIcon>
       </Box>
     </Box>
   );

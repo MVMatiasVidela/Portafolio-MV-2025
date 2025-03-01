@@ -98,9 +98,6 @@ const Navbar: React.FC<NavbarProps> = ({ toggleTheme, isDarkMode }) => {
           </Link>
         </Box>
 
-        <Link href="#contact">
-          <Button variant="contained">Contáctanos</Button>
-        </Link>
 
         {/* Botón de cambio de tema */}
         <IconButton onClick={toggleTheme} color="inherit">
