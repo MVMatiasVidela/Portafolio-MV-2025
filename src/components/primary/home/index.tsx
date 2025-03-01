@@ -3,9 +3,7 @@ import Hero from './hero/Hero';
 import About from './about/About';
 import Contact from './contact/Contact';
 import ProyectsHome from './proyects/ProyectsHome';
-import Circle1 from '@/components/secondary/circles/circles1/Circle1';
 import { Box } from '@mui/material';
-import Sumary from './Sumary/Sumary';
 
 const Index = () => {
   return (
@@ -27,7 +25,7 @@ const Index = () => {
       </Box> */}
       <Hero></Hero>
       <About></About>
-      <Sumary></Sumary>
+      <ProyectsHome></ProyectsHome>
       <Contact></Contact>
      
     </Box>

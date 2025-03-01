@@ -10,10 +10,19 @@ import LinkedInIcon from '@mui/icons-material/LinkedIn';
 
 const Profile = () => {
   return (
-    <Box sx={{ paddingY: '100px', display: 'flex', paddingX: '100px' }}>
-      <Box>
+    <Box
+      sx={{
+        paddingY: { mobile: '100px', tablet: '80px', laptop: '100px' },
+        paddingX: { mobile: '20px', tablet: '50px', laptop: '100px' },
+        display: 'flex',
+        flexDirection: { mobile: 'column', laptop: 'row' },
+        alignItems: { mobile: 'center', laptop: 'flex-start' },
+        gap: { mobile: '40px', laptop: '80px' },
+      }}
+    >
+      <Box sx={{ maxWidth: { mobile: '100%', laptop: '50%' } }}>
         <Box sx={{ display: 'flex', alignItems: 'center', gap: '12px' }}>
-          <Typography variant="h2">Acerca de mí </Typography>
+          <Typography variant="h2">Acerca de mí</Typography>
         </Box>
         <Typography variant="body1">
           Mi recorrido desde Argentina, pasando por Chile, me ha permitido
@@ -22,20 +31,25 @@ const Profile = () => {
           lo largo de mi trayectoria, con el firme compromiso de alcanzar, día a
           día, cada uno de mis objetivos de manera exitosa.
         </Typography>
-        <Box sx={{ display: 'flex', gap: '12px' }}>
-          <EmailIcon></EmailIcon>
-          <LinkedInIcon></LinkedInIcon>
-          <GitHubIcon></GitHubIcon>
-          <YouTubeIcon></YouTubeIcon>
+        <Box sx={{ display: 'flex', gap: '12px', marginTop: '20px' }}>
+          <EmailIcon fontSize="large" />
+          <LinkedInIcon fontSize="large" />
+          <GitHubIcon fontSize="large" />
+          <YouTubeIcon fontSize="large" />
           <Disp />
         </Box>
       </Box>
-      <Box sx={{ position: 'relative' }}>
-        <Object1></Object1>
+      <Box
+        sx={{
+          position: 'relative',
+          maxWidth: { mobile: '100%', laptop: '50%' },
+        }}
+      >
+        <Object1  />
         <Box
           sx={{
             position: 'absolute',
-            top: '-100px',
+            top: { mobile: '-50px', laptop: '-100px' },
             right: '0px',
             zIndex: -1,
           }}
@@ -43,7 +57,6 @@ const Profile = () => {
           <Circle2 />
         </Box>
       </Box>
-      
     </Box>
   );
 };
