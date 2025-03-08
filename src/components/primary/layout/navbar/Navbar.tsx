@@ -6,10 +6,10 @@ import {
   Typography,
   Drawer,
   List,
-  ListItem,
+ 
   ListItemText,
 } from '@mui/material';
-import Image from 'next/image';
+
 import MenuIcon from '@mui/icons-material/Menu';
 import CloseIcon from '@mui/icons-material/Close';
 import LightModeIcon from '@mui/icons-material/LightMode';
@@ -44,7 +44,12 @@ const Navbar: React.FC<NavbarProps> = ({ toggleTheme, isDarkMode }) => {
           laptop: '4.8rem', // 48px -> 4.8rem
           desktop: '4.8rem', // 48px -> 4.8rem
         },
-        paddingY: '1.2rem', // 12px -> 1.2rem
+        paddingY: {
+          mobile: '2rem', // 20px -> 2rem
+          tablet: '4.8rem', // 48px -> 4.8rem
+          laptop: '2.4rem',
+          desktop: '2.4rem',
+        },
         display: 'flex',
         justifyContent: 'space-between',
         alignItems: 'center',
@@ -93,7 +98,11 @@ const Navbar: React.FC<NavbarProps> = ({ toggleTheme, isDarkMode }) => {
 
         {/* Icono de cambio de tema visible en pantallas grandes */}
         <IconButton onClick={toggleTheme} color="inherit">
-          {isDarkMode ? <LightModeIcon /> : <DarkModeIcon />}
+          {isDarkMode ? (
+            <LightModeIcon fontSize="large" />
+          ) : (
+            <DarkModeIcon fontSize="large" />
+          )}
         </IconButton>
       </Box>
 
@@ -111,14 +120,18 @@ const Navbar: React.FC<NavbarProps> = ({ toggleTheme, isDarkMode }) => {
       >
         {/* Icono de cambio de tema en dispositivos móviles */}
         <IconButton onClick={toggleTheme} color="inherit">
-          {isDarkMode ? <LightModeIcon /> : <DarkModeIcon />}
+          {isDarkMode ? (
+            <LightModeIcon fontSize="large" />
+          ) : (
+            <DarkModeIcon fontSize="large" />
+          )}
         </IconButton>
         <IconButton
           onClick={toggleDrawer(true)}
           color="inherit"
           sx={{ marginRight: '1rem' }} // Espacio entre el icono y el botón de cambio de tema
         >
-          <MenuIcon />
+          <MenuIcon fontSize="large" />
         </IconButton>
       </Box>
 

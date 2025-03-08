@@ -1,9 +1,34 @@
-import React from 'react'
-import styles from './circles3.module.css';
-const Circles3 = () => {
-  return (
-  <div className={styles.circle}></div>
-  )
-}
+'use client';
+import { Box, useTheme } from '@mui/material';
 
-export default Circles3
+const Circle3 = () => {
+  const theme = useTheme(); // Accede al tema actual
+  return (
+    <Box
+      sx={{
+        width: {
+          mobile: '200px', // Ancho del círculo en dispositivos móviles
+          tablet: '300px', // Ancho del círculo en tablets
+          laptop: '500px', // Ancho del círculo en laptops
+          desktop: '500px', // Ancho del círculo en pantallas grandes
+        },
+        height: {
+          mobile: '200px', // Alto del círculo en dispositivos móviles
+          tablet: '300px', // Alto del círculo en tablets
+          laptop: '500px', // Alto del círculo en laptops
+          desktop: '500px', // Alto del círculo en pantallas grandes
+        },
+        borderRadius: '50%', // Para hacerlo circular
+        background:
+          theme.palette.mode === 'dark'
+            ? 'linear-gradient(135deg, #091737 20%, #091737 80%)' // El degradado
+            : 'linear-gradient(135deg, #ffffff 20%, #ffffff 20%)', // Color en modo claro
+        filter: 'blur(200px)', // Suaviza el desenfoque con 200px
+        margin: 'auto', // Centra el círculo
+        display: 'block', // Hace que se comporte como un bloque para centrarse
+      }}
+    />
+  );
+};
+
+export default Circle3;

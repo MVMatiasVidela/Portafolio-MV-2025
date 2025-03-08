@@ -4,6 +4,8 @@ import Image from 'next/image';
 import ArrowOutwardIcon from '@mui/icons-material/ArrowOutward';
 import Object2 from '@/assets/svg/Object2.svg';
 import Circle2 from '@/components/secondary/circles/circles2/Circle2';
+import Circle1 from '@/components/secondary/circles/circles1/Circle1';
+import Circles4 from '@/components/secondary/circles/circles4/Circles4';
 
 const About = () => {
   return (
@@ -86,13 +88,15 @@ const About = () => {
           variant="contained"
           sx={{
             display: 'flex',
+            paddingX: '1rem',
+            paddingY: '1rem',
             alignItems: 'center',
-            gap: '0.8rem', // 8px -> 0.8rem
-           
+            gap: '2rem', // 8px -> 0.8rem
+            justifyContent: 'center',
             width: { mobile: '100%', tablet: 'auto' },
           }}
         >
-          <Box >
+          <Box>
             <Image
               alt="Image"
               src="https://res.cloudinary.com/dseutp7hi/image/upload/v1729352638/Dise%C3%B1o_sin_xzdfgt%C3%ADtulo_pczp1e.png"
@@ -101,20 +105,36 @@ const About = () => {
               style={{ borderRadius: '100px' }}
             />
           </Box>
-          Acerca de mí
-          <ArrowOutwardIcon fontSize="large" />
+          <Box
+            sx={{
+              display: 'flex',
+              paddingX: '1rem',
+              alignItems: 'center',
+              justifyContent: 'center',
+              gap: '1rem', // 8px -> 0.8rem
+              width: { mobile: '100%', tablet: 'auto' },
+            }}
+          >
+            Acerca de mí
+            <ArrowOutwardIcon fontSize="large" />
+          </Box>
         </Button>
       </Box>
 
       <Box
         sx={{
           position: 'absolute',
-          top: '25rem', // 250px -> 25rem
-          left: '0px',
+          top: {
+            mobile: '25rem',
+            tablet: '',
+            laptop: '37rem',
+            desktop: '25rem',
+          }, // 250px -> 25rem
+          left: { mobile: '25rem', tablet: '', laptop: '17rem', desktop: '' },
           zIndex: -1,
         }}
       >
-        <Circle2 />
+        <Circles4 />
       </Box>
     </Box>
   );

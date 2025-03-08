@@ -71,8 +71,8 @@ const Hero: React.FC = () => {
               fontSize: {
                 mobile: '2.4rem', // 24px -> 2.4rem
                 tablet: '3.2rem', // 32px -> 3.2rem
-                laptop: '4rem', // 40px -> 4rem
-                desktop: '4.8rem', // 48px -> 4.8rem
+                laptop: '5rem', // 40px -> 4rem
+                desktop: '5.6rem', // 48px -> 4.8rem
               },
               fontWeight: 'bold',
             }}
