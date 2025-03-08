@@ -1,4 +1,3 @@
-'use client';
 import { useState } from 'react';
 import {
   Box,
@@ -16,6 +15,7 @@ import CloseIcon from '@mui/icons-material/Close';
 import LightModeIcon from '@mui/icons-material/LightMode';
 import DarkModeIcon from '@mui/icons-material/DarkMode';
 import Link from 'next/link';
+import Logo from '@/assets/svg/Logo.svg';
 
 interface NavbarProps {
   toggleTheme: () => void;
@@ -36,31 +36,24 @@ const Navbar: React.FC<NavbarProps> = ({ toggleTheme, isDarkMode }) => {
         zIndex: 10,
         position: 'fixed',
         top: 0,
-        width: '100%',
+        width: '100vw',
         backdropFilter: 'blur(10px)',
         paddingX: {
-          mobile: '20px',
-          tablet: '48px',
-          laptop: '48px',
-          desktop: '48px',
-        }, // Para todos los tamaños
-        paddingY: '12px',
+          mobile: '2rem', // 20px -> 2rem
+          tablet: '4.8rem', // 48px -> 4.8rem
+          laptop: '4.8rem', // 48px -> 4.8rem
+          desktop: '4.8rem', // 48px -> 4.8rem
+        },
+        paddingY: '1.2rem', // 12px -> 1.2rem
         display: 'flex',
         justifyContent: 'space-between',
         alignItems: 'center',
       }}
     >
-      {/* Logo */}
       <Box>
-        <Image
-          src="https://res.cloudinary.com/dseutp7hi/image/upload/v1740584411/Group_5_2_l3a3uv.png"
-          alt="Logo"
-          width={150}
-          height={50}
-        />
+        <Logo />
       </Box>
 
-      {/* Menú en pantallas grandes */}
       <Box
         sx={{
           display: {
@@ -68,16 +61,16 @@ const Navbar: React.FC<NavbarProps> = ({ toggleTheme, isDarkMode }) => {
             tablet: 'none',
             laptop: 'flex',
             desktop: 'flex',
-          }, // Solo en tablet y pantallas grandes
-          gap: '36px',
+          },
+          gap: '3.6rem', // 36px -> 3.6rem
           alignItems: 'center',
         }}
       >
         <Box
           sx={{
             display: 'flex',
-            gap: '24px',
-            fontSize: '20px',
+            gap: '2.4rem', // 24px -> 2.4rem
+            fontSize: '2rem', // 20px -> 2rem
             color: 'white',
           }}
         >
@@ -98,37 +91,66 @@ const Navbar: React.FC<NavbarProps> = ({ toggleTheme, isDarkMode }) => {
           </Link>
         </Box>
 
-        {/* Botón de cambio de tema */}
+        {/* Icono de cambio de tema visible en pantallas grandes */}
         <IconButton onClick={toggleTheme} color="inherit">
           {isDarkMode ? <LightModeIcon /> : <DarkModeIcon />}
         </IconButton>
       </Box>
 
-      {/* Menú hamburguesa en pantallas pequeñas */}
-      <IconButton
+      {/* Icono de menú hamburguesa en móviles */}
+      <Box
         sx={{
           display: {
             mobile: 'flex',
             tablet: 'flex',
             laptop: 'none',
             desktop: 'none',
-          }, // Solo en pantallas pequeñas (mobile y tablet)
+          },
+          alignItems: 'center',
         }}
-        onClick={toggleDrawer(true)}
-        color="inherit"
       >
-        <MenuIcon />
-      </IconButton>
+        {/* Icono de cambio de tema en dispositivos móviles */}
+        <IconButton onClick={toggleTheme} color="inherit">
+          {isDarkMode ? <LightModeIcon /> : <DarkModeIcon />}
+        </IconButton>
+        <IconButton
+          onClick={toggleDrawer(true)}
+          color="inherit"
+          sx={{ marginRight: '1rem' }} // Espacio entre el icono y el botón de cambio de tema
+        >
+          <MenuIcon />
+        </IconButton>
+      </Box>
 
-      {/* Drawer lateral */}
-      <Drawer anchor="right" open={open} onClose={toggleDrawer(false)}>
-        <Box
-          sx={{
-            width: 250,
-            padding: '20px',
+      {/* Drawer - Menú hamburguesa */}
+      <Drawer
+        anchor="right"
+        open={open}
+        onClose={toggleDrawer(false)}
+        sx={{
+          backdropFilter: 'blur(10px)', // Fondo difuso al abrir el menú
+          '& .MuiDrawer-paper': {
+            backgroundColor: 'transparent', // Fondo transparente para el Drawer en sí
+            width: '25rem', // 250px -> 25rem
+            height: '35rem', // 250px -> 25rem
+            borderEndStartRadius: '2rem',
+            borderTopLeftRadius: '2rem',
             display: 'flex',
             flexDirection: 'column',
-            gap: '20px',
+            gap: '2rem', // 20px -> 2rem
+            boxShadow: '0 4px 12px rgba(0, 0, 0, 0.1)', // Sombra para el efecto de profundidad
+          },
+        }}
+      >
+        <Box
+          sx={{
+            backgroundColor: isDarkMode ? '#030712' : '#f5f5f5', // Fondo para los ítems de navegación
+            flex: 1, // Asegura que ocupe todo el espacio disponible
+            display: 'flex',
+            flexDirection: 'column',
+            gap: '2rem',
+            paddingTop: '2rem',
+            padding: '1em',
           }}
         >
           <IconButton
@@ -144,14 +166,13 @@ const Navbar: React.FC<NavbarProps> = ({ toggleTheme, isDarkMode }) => {
               { text: 'Sobre mí', href: '/about' },
               { text: 'Proyectos', href: '/proyects' },
             ].map(item => (
-              <ListItem
+              <Link
                 key={item.text}
-                component="a"
                 href={item.href}
                 onClick={toggleDrawer(false)}
               >
                 <ListItemText primary={item.text} />
-              </ListItem>
+              </Link>
             ))}
           </List>
 

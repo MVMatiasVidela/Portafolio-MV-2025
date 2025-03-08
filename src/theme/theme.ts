@@ -26,81 +26,91 @@ export const lightTheme = createTheme({
     fontFamily: poppins.style.fontFamily,
 
     h1: {
-      fontSize: '48px',
+      fontSize: '4.8rem', // 48px → 4.8rem
       fontWeight: 'bold',
     },
     h2: {
+      fontSize: '4rem', // 40px → 4rem
       fontWeight: 'bold',
-      fontSize: '40px',
     },
     h3: {
+      fontSize: '3.2rem', // 32px → 3.2rem
       fontWeight: 'bold',
-      fontSize: '32px',
     },
     h4: {
+      fontSize: '2.8rem', // 28px → 2.8rem
       fontWeight: 'bold',
-      fontSize: '28px',
     },
     h5: {
+      fontSize: '2rem', // 20px → 2rem
       fontWeight: '400',
-      fontSize: '20px',
     },
     h6: {
+      fontSize: '1.6rem', // 16px → 1.6rem
       fontWeight: '400',
-      fontSize: '16px',
     },
     body1: {
+      fontSize: '2rem', // 20px → 2rem
       fontWeight: '400',
-      fontSize: '20px',
     },
     body2: {
+      fontSize: '1.6rem', // 16px → 1.6rem
       fontWeight: '400',
-      fontSize: '16px',
     },
     button: {
+      fontSize: '1.6rem', // 16px → 1.6rem
       fontWeight: '600',
-      fontSize: '16px',
       textTransform: 'capitalize',
     },
     caption1: {
+      fontSize: '1.6rem',
       fontWeight: '600',
-      fontSize: '16px',
     },
     caption2: {
+      fontSize: '1.4rem',
       fontWeight: 'normal',
-      fontSize: '14px',
     },
   },
   breakpoints: {
     values: {
       mobile: 0,
-      tablet: 640,
-      laptop: 1024,
-      desktop: 1280,
+      tablet: 768, // Mejor para cubrir tablets más grandes
+      laptop: 1024, // Compatible con más laptops
+      desktop: 1440, // Estándar para monitores grandes
     },
   },
+
   components: {
     MuiButton: {
       styleOverrides: {
         root: {
-          borderRadius: 40,
-          padding: '12px 24px',
+          borderRadius: '2.5rem', // 40px → 2.5rem
+          padding: '1.2rem 2.4rem', // 12px 24px → 1.2rem 2.4rem
         },
       },
     },
 
-    MuiInputBase: {
+    // MuiInputBase: {
+    //   styleOverrides: {
+    //     input: {
+    //       '&:-webkit-autofill': {
+    //         WebkitBoxShadow: '0 0 0px 1000px transparent inset',
+    //         WebkitTextFillColor: '#fff',
+    //         transition: 'background-color 5000s ease-in-out 0s',
+    //       },
+    //     },
+    //   },
+    // },
+    MuiCssBaseline: {
       styleOverrides: {
-        input: {
-          '&:-webkit-autofill': {
-            WebkitBoxShadow: '0 0 0px 1000px transparent inset',
-            WebkitTextFillColor: '#fff',
-            transition: 'background-color 5000s ease-in-out 0s',
-          },
+        html: {
+          scrollbarWidth: 'none',
+        },
+        'html::-webkit-scrollbar': {
+          display: 'none',
         },
       },
     },
-
     MuiTypography: {
       styleOverrides: {
         root: {
@@ -119,97 +129,98 @@ export const darkTheme = createTheme({
     background: {
       default: '#030712',
     },
-   
   },
 
   typography: {
     fontFamily: poppins.style.fontFamily,
 
     h1: {
-     
-      fontSize: '48px',
+      fontSize: '4.8rem', // 48px → 4.8rem
       fontWeight: 'bold',
     },
     h2: {
-     
+      fontSize: '4rem', // 40px → 4rem
       fontWeight: 'bold',
-      fontSize: '40px',
     },
     h3: {
-     
+      fontSize: '3.2rem', // 32px → 3.2rem
       fontWeight: 'bold',
-      fontSize: '32px',
     },
     h4: {
-     
+      fontSize: '2.8rem', // 28px → 2.8rem
       fontWeight: 'bold',
-      fontSize: '28px',
     },
     h5: {
-      
+      fontSize: '2rem', // 20px → 2rem
       fontWeight: '400',
-      fontSize: '20px',
     },
     h6: {
+      fontSize: '1.6rem', // 16px → 1.6rem
       fontWeight: '400',
-      fontSize: '16px',
     },
     body1: {
+      fontSize: '2rem', // 20px → 2rem
       fontWeight: '400',
-      fontSize: '20px',
     },
     body2: {
+      fontSize: '1.6rem', // 16px → 1.6rem
       fontWeight: '400',
-      fontSize: '16px',
     },
     button: {
+      fontSize: '1.6rem', // 16px → 1.6rem
       fontWeight: '600',
-      fontSize: '16px',
       textTransform: 'capitalize',
     },
     caption1: {
+      fontSize: '1.6rem',
       fontWeight: '600',
-      fontSize: '16px',
     },
     caption2: {
+      fontSize: '1.4rem',
       fontWeight: 'normal',
-      fontSize: '14px',
     },
   },
 
   breakpoints: {
     values: {
       mobile: 0,
-      tablet: 640,
-      laptop: 1024,
-      desktop: 1280,
+      tablet: 768, // Mejor para cubrir tablets más grandes
+      laptop: 1024, // Compatible con más laptops
+      desktop: 1440, // Estándar para monitores grandes
     },
   },
-
 
   components: {
     MuiButton: {
       styleOverrides: {
         root: {
-          borderRadius: 40,
-          padding: '12px 24px',
-
+          borderRadius: '2.5rem', // 40px → 2.5rem
+          padding: '1.2rem 2.4rem', // 12px 24px → 1.2rem 2.4rem
         },
       },
     },
 
-    MuiInputBase: {
+    // MuiInputBase: {
+    //   styleOverrides: {
+    //     input: {
+    //       '&:-webkit-autofill': {
+    //         WebkitBoxShadow: '0 0 0px 1000px transparent inset',
+    //         WebkitTextFillColor: '#fff',
+    //         transition: 'background-color 5000s ease-in-out 0s',
+    //       },
+    //     },
+    //   },
+    // },
+    MuiCssBaseline: {
       styleOverrides: {
-        input: {
-          '&:-webkit-autofill': {
-            WebkitBoxShadow: '0 0 0px 1000px transparent inset',
-            WebkitTextFillColor: '#fff',
-            transition: 'background-color 5000s ease-in-out 0s',
-          },
+        html: {
+          scrollbarWidth: 'none',
+        },
+        'html::-webkit-scrollbar': {
+          display: 'none',
         },
       },
     },
-
     MuiTypography: {
       styleOverrides: {
         root: {

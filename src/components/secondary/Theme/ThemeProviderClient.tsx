@@ -2,7 +2,7 @@
 import { useState, useMemo } from 'react';
 import { ThemeProvider, CssBaseline } from '@mui/material';
 import { lightTheme, darkTheme } from '@/theme/theme';
-import Navbar from '@/components/primary/home/navbar/Navbar';
+import Navbar from '@/components/primary/layout/navbar/Navbar';
 
 const ThemeProviderClient = ({ children }: { children: React.ReactNode }) => {
   const [isDarkMode, setIsDarkMode] = useState<boolean>(true);

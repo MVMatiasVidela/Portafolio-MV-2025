@@ -1,5 +1,14 @@
 'use client';
-import { Box, Button, CardMedia, Grid, Grid2, Link, Paper, Typography } from '@mui/material';
+import {
+  Box,
+  Button,
+  CardMedia,
+  Grid,
+  Grid2,
+  Link,
+  Paper,
+  Typography,
+} from '@mui/material';
 import { styled } from '@mui/material/styles';
 import Circle1 from '@/components/secondary/circles/circles1/Circle1';
 import CirclePampa from '@/components/secondary/circles/CirclesProyects/CirclesPampa/CirclePampa';
@@ -13,10 +22,10 @@ const Item = styled(Paper)(({ theme }) => ({
   position: 'relative',
   display: 'flex',
   flexDirection: 'column',
-  gap: '16px',
-  padding: '30px',
+  gap: '1.6rem', // 16px -> 1.6rem
+  padding: '3rem', // 30px -> 3rem
   backgroundColor: 'transparent',
-  borderRadius: '10px',
+  borderRadius: '1rem', // 10px -> 1rem
   border: '1px solid #282F3C',
   overflow: 'hidden',
   transition: 'all 0.3s ease-in-out',
@@ -35,7 +44,12 @@ const Item = styled(Paper)(({ theme }) => ({
   },
 }));
 
-const circleComponents = [CircleDentAll, CircleIMania , CirclePampa, CircleServismart];
+const circleComponents = [
+  CircleDentAll,
+  CircleIMania,
+  CirclePampa,
+  CircleServismart,
+];
 
 export default function ProyectsHome() {
   return (
@@ -45,9 +59,9 @@ export default function ProyectsHome() {
         flexDirection: 'column',
         justifyContent: 'center',
         alignItems: 'center',
-        gap: '24px',
-        paddingX: { mobile: '20px', tablet: '50px', laptop: '100px' },
-        paddingBottom: { mobile: '100px', laptop: '200px' },
+        gap: '2.4rem', // 24px -> 2.4rem
+        paddingX: { mobile: '2rem', tablet: '5rem', laptop: '10rem' }, // 20px -> 2rem, 50px -> 5rem, 100px -> 10rem
+        paddingBottom: { mobile: '10rem', laptop: '20rem' }, // 100px -> 10rem, 200px -> 20rem
         position: 'relative',
       }}
     >
@@ -55,8 +69,8 @@ export default function ProyectsHome() {
       <Box
         sx={{
           position: 'absolute',
-          top: '100px',
-          left: '50px',
+          top: '10rem', // 100px -> 10rem
+          left: '5rem', // 50px -> 5rem
           zIndex: -1,
         }}
       >
@@ -68,14 +82,16 @@ export default function ProyectsHome() {
         variant="h2"
         sx={{
           textAlign: 'center',
-          fontSize: { mobile: '28px', tablet: '36px', desktop: '48px' },
+          fontSize: { mobile: '2.8rem', tablet: '3.6rem', desktop: '4.8rem' }, // 28px -> 2.8rem, 36px -> 3.6rem, 48px -> 4.8rem
         }}
       >
         Proyectos destacados
       </Typography>
 
       {/* Grid de proyectos */}
-      <Grid2 container spacing={3} sx={{ width: '100%', maxWidth: '1400px' }}>
+      <Grid2 container spacing={3} sx={{ width: '100%', maxWidth: '140rem' }}>
+        {' '}
+        {/* 1400px -> 140rem */}
         {[
           {
             title: 'DentAll',
@@ -124,42 +140,31 @@ export default function ProyectsHome() {
                   <CircleComponent />
                 </Box> */}
 
-                {/* Icono del proyecto */}
-                {/* <CardMedia
-                  component="img"
-                  image={project.icon}
-                  alt="Icono"
-                  sx={{ width: '80px' }}
-                /> */}
-
-               <Box>
-
-                <Typography
-                  variant="h2"
-                  sx={{
-                   
-                    fontSize: { mobile: '14px', tablet: '16px' },
-                  }}
-                >
-                  {project.title}
-                </Typography>
-                <Typography
-                  variant="h6"
-                  sx={{
-                    
-                    fontSize: { mobile: '14px', tablet: '16px' },
-                  }}
-                >
-                  {project.description}
-                </Typography>
-               </Box>
+                <Box>
+                  <Typography
+                    variant="h2"
+                    sx={{
+                      fontSize: { mobile: '1.4rem', tablet: '1.6rem' }, // 14px -> 1.4rem, 16px -> 1.6rem
+                    }}
+                  >
+                    {project.title}
+                  </Typography>
+                  <Typography
+                    variant="h6"
+                    sx={{
+                      fontSize: { mobile: '1.4rem', tablet: '1.6rem' }, // 14px -> 1.4rem, 16px -> 1.6rem
+                    }}
+                  >
+                    {project.description}
+                  </Typography>
+                </Box>
 
                 {/* Imagen del proyecto */}
                 <CardMedia
                   component="img"
                   image={project.image}
                   alt="Proyecto"
-                  sx={{ borderRadius: '5px' }}
+                  sx={{ borderRadius: '0.5rem' }} // 5px -> 0.5rem
                 />
               </Item>
             </Grid2>
@@ -169,7 +174,10 @@ export default function ProyectsHome() {
 
       {/* Botón de Ver Todos */}
       <Link
-        sx={{ marginTop: '32px', fontSize: { mobile: '14px', tablet: '16px' } }}
+        sx={{
+          marginTop: '3.2rem',
+          fontSize: { mobile: '1.4rem', tablet: '1.6rem' },
+        }} // 14px -> 1.4rem, 16px -> 1.6rem
       >
         Ver todos los proyectos
       </Link>

@@ -1,15 +1,19 @@
 import React from 'react'
 import Profile from './Profile/Profile'
 import Contact from '../home/contact/Contact'
-import Sumary from '../home/Sumary/Sumary'
+import Experience from './Experience/Experience'
+import Team from './Team/Team'
+import Stack from './Stack/Stack'
 
 
 const Index = () => {
   return (
     <div>
       <Profile></Profile>
-      <Sumary></Sumary>
-      <Contact></Contact>
+      <Experience></Experience>
+      <Stack></Stack>
+      <Team></Team>
+      {/* <Contact></Contact> */}
     </div>
   )
 }

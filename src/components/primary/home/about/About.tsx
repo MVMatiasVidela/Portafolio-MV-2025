@@ -2,7 +2,7 @@
 import { Box, Button, CardMedia, Typography } from '@mui/material';
 import Image from 'next/image';
 import ArrowOutwardIcon from '@mui/icons-material/ArrowOutward';
-import Object2 from '@/assets/svg/Object2.svg'
+import Object2 from '@/assets/svg/Object2.svg';
 import Circle2 from '@/components/secondary/circles/circles2/Circle2';
 
 const About = () => {
@@ -10,23 +10,28 @@ const About = () => {
     <Box
       sx={{
         display: 'flex',
-        flexDirection: { mobile: 'column', desktop: 'row' }, // Columna en mobile, fila en desktop
+        flexDirection: { mobile: 'column', laptop: 'row', desktop: 'row' }, // Columna en mobile, fila en desktop
         justifyContent: 'center',
         alignItems: 'center',
         paddingX: {
-          mobile: '20px',
-          tablet: '50px',
-          laptop: '80px',
-          desktop: '100px',
+          mobile: '2rem', // 20px -> 2rem
+          tablet: '5rem', // 50px -> 5rem
+          laptop: '8rem', // 80px -> 8rem
+          desktop: '10rem', // 100px -> 10rem
         },
         paddingY: {
-          mobile: '80px',
-          tablet: '120px',
-          laptop: '160px',
-          desktop: '200px',
+          mobile: '8rem', // 80px -> 8rem
+          tablet: '10rem', // 120px -> 12rem
+          laptop: '10rem', // 160px -> 16rem
+          desktop: '10rem', // 200px -> 20rem
         },
-        gap: { mobile: '24px', tablet: '36px' },
-        position:'relative'
+        gap: {
+          mobile: '2.4rem',
+          tablet: '3.6rem',
+          laptop: '3.6rem',
+          desktop: '3.6rem',
+        }, // 24px -> 2.4rem, 36px -> 3.6rem
+        position: 'relative',
       }}
     >
       {/* Imagen */}
@@ -37,18 +42,18 @@ const About = () => {
       {/* Texto */}
       <Box
         sx={{
-          textAlign: { mobile: 'center', desktop: 'left' },
-          maxWidth: '600px',
+          textAlign: { mobile: 'center', laptop: 'left', desktop: 'left' },
+          maxWidth: '60rem', // 600px -> 60rem
         }}
       >
         <Typography
-       
+          variant="h2"
           sx={{
             fontSize: {
-              mobile: '24px',
-              tablet: '32px',
-              laptop: '20px',
-              desktop: '48px',
+              mobile: '2.4rem', // 24px -> 2.4rem
+              tablet: '3.2rem', // 32px -> 3.2rem
+              laptop: '3rem', // 20px -> 2rem
+              desktop: '4rem', // 48px -> 4.8rem
             },
           }}
         >
@@ -56,25 +61,24 @@ const About = () => {
         </Typography>
 
         <Typography
-
           sx={{
             fontSize: {
-              mobile: '14px',
-              tablet: '16px',
-              laptop: '10px',
-              desktop: '20px',
+              mobile: '1.4rem', // 14px -> 1.4rem
+              tablet: '1.6rem', // 16px -> 1.6rem
+              laptop: '1.6rem', // 10px -> 1rem
+              desktop: '2rem', // 20px -> 2rem
             },
             color: 'text.secondary',
-            marginY: '16px',
+            marginY: '1.6rem', // 16px -> 1.6rem
           }}
         >
           En cada proyecto que emprendo, mi propósito es fusionar de manera
           equilibrada la estética, la funcionalidad y la eficiencia, para
           ofrecer soluciones que no solo cubran las necesidades del usuario,
-          sino que también generen un valor tangible para el negocio. <br />
-          Mi enfoque es lograr un impacto positivo y duradero, asegurando que
-          cada detalle esté orientado a potenciar tanto la experiencia del
-          usuario como los resultados comerciales.
+          sino que también generen un valor tangible para el negocio. Mi enfoque
+          es lograr un impacto positivo y duradero, asegurando que cada detalle
+          esté orientado a potenciar tanto la experiencia del usuario como los
+          resultados comerciales.
         </Typography>
 
         {/* Botón */}
@@ -83,28 +87,29 @@ const About = () => {
           sx={{
             display: 'flex',
             alignItems: 'center',
-            gap: '8px',
-            marginTop: '16px',
+            gap: '0.8rem', // 8px -> 0.8rem
+           
             width: { mobile: '100%', tablet: 'auto' },
           }}
         >
-          <Box sx={{borderRadius:'100px'}}>
-
-          <Image
-            alt="Image"
-            src="https://res.cloudinary.com/dseutp7hi/image/upload/v1729352638/Dise%C3%B1o_sin_xzdfgt%C3%ADtulo_pczp1e.png"
-            height={35}
-            width={35}
-          />
+          <Box >
+            <Image
+              alt="Image"
+              src="https://res.cloudinary.com/dseutp7hi/image/upload/v1729352638/Dise%C3%B1o_sin_xzdfgt%C3%ADtulo_pczp1e.png"
+              height={3.5 * 10} // 35px -> 3.5rem
+              width={3.5 * 10} // 35px -> 3.5rem
+              style={{ borderRadius: '100px' }}
+            />
           </Box>
           Acerca de mí
-          <ArrowOutwardIcon fontSize="small" />
+          <ArrowOutwardIcon fontSize="large" />
         </Button>
       </Box>
+
       <Box
         sx={{
           position: 'absolute',
-          top: '250px',
+          top: '25rem', // 250px -> 25rem
           left: '0px',
           zIndex: -1,
         }}

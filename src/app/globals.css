@@ -1,21 +1,10 @@
 html {
   scroll-behavior: smooth;
+   font-size: 62.5%; /* 1rem = 10px en lugar de 16px */
 }
-#contact,
-#service,
-#about {
-  scroll-margin-top: 120px;
-}
-
-#home {
-  scroll-margin-top: 160px;
-}
-.link{
+a{
   text-decoration: none;
-}
-
-* {
-  border-color: var(--border);
+   color: inherit;
 }
 svg,
 img {

@@ -5,7 +5,6 @@ import { Box, Button, Link, Typography } from '@mui/material';
 import { useTheme } from '@mui/material/styles';
 import Image from 'next/image';
 
-
 const Hero: React.FC = () => {
   const theme = useTheme();
 
@@ -25,12 +24,16 @@ const Hero: React.FC = () => {
         alignItems: 'center',
         justifyContent: 'center',
         paddingX: {
-          mobile: '20px',
-          tablet: '50px',
-          laptop: '80px',
-          desktop: '100px',
+          mobile: '2rem', // 20px -> 2rem
+          tablet: '5rem', // 50px -> 5rem
+          laptop: '8rem', // 80px -> 8rem
+          desktop: '10rem', // 100px -> 10rem
         },
-        paddingY: { mobile: '100px', tablet: '80px', laptop: '100px' },
+        paddingY: {
+          mobile: '10rem', // 100px -> 10rem
+          tablet: '8rem', // 80px -> 8rem
+          laptop: '10rem', // 100px -> 10rem
+        },
       }}
     >
       <Box
@@ -41,8 +44,8 @@ const Hero: React.FC = () => {
           alignItems: 'center',
           justifyContent: 'space-between',
           width: '100%',
-          maxWidth: '1200px',
-          gap: { mobile: '40px', laptop: '80px' },
+          maxWidth: '120rem', // 1200px -> 120rem
+          gap: { mobile: '4rem', laptop: '8rem' }, // 40px -> 4rem, 80px -> 8rem
         }}
       >
         {/* Sección de texto */}
@@ -52,18 +55,18 @@ const Hero: React.FC = () => {
             flexDirection: 'column',
             alignItems: { mobile: 'center', laptop: 'flex-start' },
             textAlign: { mobile: 'center', laptop: 'left' },
-            maxWidth: '600px',
-            gap: '16px',
+            maxWidth: '60rem', // 600px -> 60rem
+            gap: '1.6rem', // 16px -> 1.6rem
           }}
         >
           <Typography
             variant="h1"
             sx={{
               fontSize: {
-                mobile: '24px',
-                tablet: '32px',
-                laptop: '40px',
-                desktop: '48px',
+                mobile: '2.4rem', // 24px -> 2.4rem
+                tablet: '3.2rem', // 32px -> 3.2rem
+                laptop: '4rem', // 40px -> 4rem
+                desktop: '4.8rem', // 48px -> 4.8rem
               },
               fontWeight: 'bold',
             }}
@@ -75,10 +78,10 @@ const Hero: React.FC = () => {
             <Typography
               sx={{
                 fontSize: {
-                  mobile: '14px',
-                  tablet: '16px',
-                  laptop: '18px',
-                  desktop: '20px',
+                  mobile: '1.4rem', // 14px -> 1.4rem
+                  tablet: '1.6rem', // 16px -> 1.6rem
+                  laptop: '1.8rem', // 18px -> 1.8rem
+                  desktop: '2rem', // 20px -> 2rem
                 },
                 color: 'text.secondary',
               }}
@@ -92,7 +95,7 @@ const Hero: React.FC = () => {
             sx={{
               display: 'flex',
               flexDirection: { mobile: 'column', tablet: 'row' },
-              gap: '12px',
+              gap: '1.2rem', // 12px -> 1.2rem
               width: '100%',
               maxWidth: { mobile: '100%', tablet: 'auto' },
             }}
@@ -115,7 +118,6 @@ const Hero: React.FC = () => {
                 Descargar CV
               </Button>
             </Link>
-        
           </Box>
         </Box>
 
@@ -124,8 +126,8 @@ const Hero: React.FC = () => {
           <Image
             src="https://res.cloudinary.com/dseutp7hi/image/upload/v1740767710/Group_12_2_yeu7hg.png"
             alt="Imagen"
-            width={350}
-            height={350}
+            width={35 * 10} // 350px -> 35rem
+            height={35 * 10} // 350px -> 35rem
             style={{ maxWidth: '100%', height: 'auto' }}
           />
         </Box>
