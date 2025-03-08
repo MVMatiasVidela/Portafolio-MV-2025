@@ -8,14 +8,14 @@ import CSS from '@/assets/svg/CSS.svg';
 import TS from '@/assets/svg/TS.svg';
 import JS from '@/assets/svg/JS.svg';
 import HTML from '@/assets/svg/HTML.svg';
-import REACT from '@/assets/svg/REACT.svg';
+// import REACT from '@/assets/svg/REACT.svg';
 import TAIL from '@/assets/svg/TAIL.svg';
 import NEXT from '@/assets/svg/NEXT.svg';
 import EX from '@/assets/svg/EX.svg';
 import NODE from '@/assets/svg/NODE.svg';
 import DB from '@/assets/svg/DB.svg';
 import SQL from '@/assets/svg/SQL.svg';
-import ANGULAR from '@/assets/svg/ANGULAR.svg';
+// import ANGULAR from '@/assets/svg/ANGULAR.svg';
 import TRELLO from '@/assets/svg/TRELLO.svg';
 import FIGMA from '@/assets/svg/FIGMA.svg';
 import VERCEL from '@/assets/svg/VERCEL.svg';
@@ -43,8 +43,8 @@ const iconsTech = [
   CSS,
   TS,
   JS,
-  REACT,
-  ANGULAR,
+  // REACT,
+  // ANGULAR,
   TAIL,
   NEXT,
   EX,
