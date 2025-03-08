@@ -12,10 +12,16 @@ const Hero: React.FC = () => {
   useTextoAnimado('miTexto');
   useTextoAnimado('miTexto2');
 
+  // Determinamos la imagen de fondo según el modo
+  const backgroundImage =
+    theme.palette.mode === 'dark'
+      ? 'https://res.cloudinary.com/dseutp7hi/image/upload/v1740767851/Group_48095605_2_ccgeen.png'
+      : 'https://res.cloudinary.com/dseutp7hi/image/upload/v1741445244/Group_48095605_3_utyfjf.png';
+
   return (
     <Box
       sx={{
-        backgroundImage: `url(https://res.cloudinary.com/dseutp7hi/image/upload/v1740767851/Group_48095605_2_ccgeen.png)`,
+        backgroundImage: `url(${backgroundImage})`,
         backgroundSize: 'cover',
         backgroundPosition: 'center',
         backgroundRepeat: 'no-repeat',
