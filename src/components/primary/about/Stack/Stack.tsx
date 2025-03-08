@@ -1,10 +1,9 @@
 'use client';
-import * as React from 'react';
 import { styled } from '@mui/material/styles';
 import Box from '@mui/material/Box';
 import Paper from '@mui/material/Paper';
 import Grid from '@mui/material/Grid2';
-import { Grid2, Typography, useTheme } from '@mui/material';
+import {  Typography, useTheme } from '@mui/material';
 import CSS from '@/assets/svg/CSS.svg';
 import TS from '@/assets/svg/TS.svg';
 import JS from '@/assets/svg/JS.svg';
