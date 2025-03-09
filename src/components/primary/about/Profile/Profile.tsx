@@ -22,20 +22,25 @@ const Profile = () => {
     <Box
       sx={{
         paddingY: { mobile: '10rem', tablet: '8rem', laptop: '10rem' }, // 100px -> 10rem, 80px -> 8rem
-        paddingX: { mobile: '2rem', tablet: '5rem', laptop: '10rem' }, // 20px -> 2rem, 50px -> 5rem, 100px -> 10rem
+        paddingX: { mobile: '2rem', tablet: '5rem', laptop: '15rem' }, // 20px -> 2rem, 50px -> 5rem, 100px -> 10rem
         display: 'flex',
+        minHeight: '100vh',
         flexDirection: { mobile: 'column', laptop: 'row' },
-        alignItems: { mobile: 'center', laptop: 'flex-start' },
+        alignItems: { mobile: 'center', laptop: 'center' },
+        justifyContent: 'space-between',
         gap: { mobile: '4rem', laptop: '8rem' }, // 40px -> 4rem, 80px -> 8rem
       }}
     >
-      <Box sx={{ maxWidth: { mobile: '100%', laptop: '50%' } }}>
+      <Box sx={{ maxWidth: { mobile: '100%', laptop: '65rem' } }}>
         <Box sx={{ display: 'flex', alignItems: 'center', gap: '1.2rem' }}>
           {' '}
           {/* 12px -> 1.2rem */}
           <Typography variant="h2">Acerca de mí</Typography>
         </Box>
-        <Typography variant="body1">
+        <Typography
+          variant="body1"
+          sx={{ fontSize: { mobile: '10rem', laptop: '2rem' } }}
+        >
           Mi recorrido desde Argentina, pasando por Chile, me ha permitido
           adentrarme en el fascinante mundo de la tecnología. Actualmente, me
           encuentro en España, perfeccionando las habilidades que he adquirido a
@@ -70,15 +75,15 @@ const Profile = () => {
       <Box
         sx={{
           position: 'relative',
-          maxWidth: { mobile: '100%', laptop: '50%' },
+          width: { mobile: '100%', laptop: '30rem' },
         }}
       >
         <Object1 />
         <Box
           sx={{
             position: 'absolute',
-            top: { mobile: '-5rem', laptop: '-10rem' }, // -50px -> -5rem, -100px -> -10rem
-            right: '0',
+            top: { mobile: '0rem', laptop: '-40rem' }, 
+            right: '80rem',
             zIndex: -1,
           }}
         >
@@ -88,8 +93,8 @@ const Profile = () => {
       <Box
         sx={{
           position: 'absolute',
-          top: { mobile: '-5rem', laptop: '15rem' }, // -50px -> -5rem, 150px -> 15rem
-          right: '22rem', // 220px -> 22rem
+          top: { mobile: '-5rem', laptop: '30rem' },
+          right: { mobile: '-5rem', laptop: '10rem' },
           zIndex: -1,
         }}
       >

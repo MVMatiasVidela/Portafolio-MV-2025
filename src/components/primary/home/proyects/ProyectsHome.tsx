@@ -3,7 +3,7 @@ import {
   Box,
   Button,
   CardMedia,
-  Grid,
+
   Grid2,
   Link,
   Paper,
@@ -60,8 +60,13 @@ export default function ProyectsHome() {
         justifyContent: 'center',
         alignItems: 'center',
         gap: '2.4rem', // 24px -> 2.4rem
-        paddingX: { mobile: '2rem', tablet: '5rem', laptop: '10rem' }, // 20px -> 2rem, 50px -> 5rem, 100px -> 10rem
-        paddingBottom: { mobile: '10rem', laptop: '20rem' }, // 100px -> 10rem, 200px -> 20rem
+        paddingX: {
+          mobile: '2rem',
+          tablet: '5rem',
+          laptop: '15rem',
+          desktop: '15rem',
+        },
+        paddingBottom: { mobile: '10rem', laptop: '10rem' },
         position: 'relative',
       }}
     >
@@ -99,28 +104,28 @@ export default function ProyectsHome() {
               'Plataforma de gestión de citas para clínicas dentales',
             icon: '',
             image:
-              'https://res.cloudinary.com/dseutp7hi/image/upload/v1740824794/dental_fbfflq.png',
+              'https://res.cloudinary.com/dseutp7hi/image/upload/v1741550567/dental_1_jepjqp.png',
           },
           {
             title: 'IMania',
             description: 'Plataforma E-Commerce para venta de productos Apple',
             icon: '',
             image:
-              'https://res.cloudinary.com/dseutp7hi/image/upload/v1740824793/imania_nhi1us.png',
+              'https://res.cloudinary.com/dseutp7hi/image/upload/v1741550663/imania_kk4jjy.png',
           },
           {
             title: 'Pampa',
             description: 'E-Commerce para venta de sellos decorativos',
             icon: '',
             image:
-              'https://res.cloudinary.com/dseutp7hi/image/upload/v1740825098/pampa_yxouqk.png',
+              'https://res.cloudinary.com/dseutp7hi/image/upload/v1741550610/pampa_kgbeuh.png',
           },
           {
             title: 'Servismart',
             description: 'Plataforma de gestión de licitaciones',
             icon: '',
             image:
-              'https://res.cloudinary.com/dseutp7hi/image/upload/v1740824794/Header_rpt4fl_hreq2e.png',
+              'https://res.cloudinary.com/dseutp7hi/image/upload/v1741550488/Header_rpt4fl_1_okb4tz.png',
           },
         ].map((project, index) => {
           const CircleComponent =

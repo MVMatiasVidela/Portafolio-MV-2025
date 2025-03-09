@@ -1,10 +1,8 @@
 'use client';
 import { Box, Button, CardMedia, Typography } from '@mui/material';
 import Image from 'next/image';
-import ArrowOutwardIcon from '@mui/icons-material/ArrowOutward';
+import KeyboardArrowRightRoundedIcon from '@mui/icons-material/KeyboardArrowRightRounded';
 import Object2 from '@/assets/svg/Object2.svg';
-import Circle2 from '@/components/secondary/circles/circles2/Circle2';
-import Circle1 from '@/components/secondary/circles/circles1/Circle1';
 import Circles4 from '@/components/secondary/circles/circles4/Circles4';
 
 const About = () => {
@@ -12,20 +10,20 @@ const About = () => {
     <Box
       sx={{
         display: 'flex',
-        flexDirection: { mobile: 'column', laptop: 'row', desktop: 'row' }, // Columna en mobile, fila en desktop
-        justifyContent: 'center',
+        flexDirection: { mobile: 'column', laptop: 'row', desktop: 'row' }, 
+        justifyContent: 'space-between',
         alignItems: 'center',
         paddingX: {
-          mobile: '2rem', // 20px -> 2rem
-          tablet: '5rem', // 50px -> 5rem
-          laptop: '8rem', // 80px -> 8rem
-          desktop: '10rem', // 100px -> 10rem
+          mobile: '2rem', 
+          tablet: '5rem', 
+          laptop: '15rem', 
+          desktop: '15rem', 
         },
-        paddingY: {
-          mobile: '8rem', // 80px -> 8rem
-          tablet: '10rem', // 120px -> 12rem
-          laptop: '10rem', // 160px -> 16rem
-          desktop: '10rem', // 200px -> 20rem
+        paddingBottom: {
+          mobile: '8rem', 
+          tablet: '10rem',
+          laptop: '10rem', 
+          desktop: 'rem', 
         },
         gap: {
           mobile: '2.4rem',
@@ -36,9 +34,13 @@ const About = () => {
         position: 'relative',
       }}
     >
-      {/* Imagen */}
-      <Box sx={{ display: 'flex', justifyContent: 'center' }}>
-        <Object2 />
+      <Box
+        sx={{
+          display: 'flex',
+          justifyContent: 'center',
+        }}
+      >
+        <Object2 style={{ width: '40rem', }} />
       </Box>
 
       {/* Texto */}
@@ -88,8 +90,8 @@ const About = () => {
           variant="contained"
           sx={{
             display: 'flex',
-            paddingX: '1rem',
-            paddingY: '1rem',
+            paddingX: '0.5rem',
+            paddingY: '0.5rem',
             alignItems: 'center',
             gap: '2rem', // 8px -> 0.8rem
             justifyContent: 'center',
@@ -108,15 +110,14 @@ const About = () => {
           <Box
             sx={{
               display: 'flex',
-              paddingX: '1rem',
               alignItems: 'center',
               justifyContent: 'center',
-              gap: '1rem', // 8px -> 0.8rem
+              gap: '0.1rem', // 8px -> 0.8rem
               width: { mobile: '100%', tablet: 'auto' },
             }}
           >
             Acerca de mí
-            <ArrowOutwardIcon fontSize="large" />
+            <KeyboardArrowRightRoundedIcon fontSize="large" />
           </Box>
         </Button>
       </Box>
@@ -127,10 +128,10 @@ const About = () => {
           top: {
             mobile: '25rem',
             tablet: '',
-            laptop: '37rem',
+            laptop: '20rem',
             desktop: '25rem',
           }, // 250px -> 25rem
-          left: { mobile: '25rem', tablet: '', laptop: '17rem', desktop: '' },
+          left: { mobile: '25rem', tablet: '', laptop: '16rem', desktop: '' },
           zIndex: -1,
         }}
       >

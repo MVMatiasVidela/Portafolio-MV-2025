@@ -62,7 +62,7 @@ export default function Stack() {
         display: 'flex',
         flexDirection: 'column',
         gap: '1rem',
-        paddingX: '6.25rem', // 100px
+        paddingX: '15rem', // 100px
         paddingTop: '2.25rem', // 36px
         paddingBottom: '6.25rem', // 100px
         width: '100%',

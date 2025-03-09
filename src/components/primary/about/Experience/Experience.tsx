@@ -36,7 +36,7 @@ export default function Experience() {
         paddingX: {
           mobile: '1.25rem', // 20px
           tablet: '3.125rem', // 50px
-          laptop: '6.25rem', // 100px
+          laptop: '15rem', // 100px
         },
         paddingY: {
           mobile: '3.125rem', // 50px
@@ -72,10 +72,10 @@ export default function Experience() {
             sx={{
               display: 'flex',
               flexDirection: 'column',
-              alignItems: 'center',
+              justifyContent:'start',
+              alignItems: 'start',
               gap: '1rem',
               maxWidth: '100%',
-              textAlign: 'center',
             }}
           >
             <Box>
@@ -94,9 +94,10 @@ export default function Experience() {
                   fontSize: {
                     mobile: '0.875rem',
                     tablet: '1rem',
-                    laptop: '1.125rem',
+                    laptop: '1.6rem',
                   },
                   color: 'text.secondary',
+                  textAlign:'start'
                 }}
               >
                 {exp.description}

@@ -12,14 +12,14 @@ export const lightTheme = createTheme({
   palette: {
     mode: 'light',
     primary: {
-      main: '#030712',
+      main: '#091737',
     },
     background: {
       default: '#D4E6FD',
       // paper: '#F5F5F5',
     },
     text: {
-      primary: '#000000',
+      primary: '#030713',
     },
   },
   typography: {
@@ -84,7 +84,7 @@ export const lightTheme = createTheme({
     MuiButton: {
       styleOverrides: {
         root: {
-          borderRadius: '5rem', 
+          borderRadius: '5rem',
           padding: '1rem 4rem',
         },
       },
@@ -197,8 +197,8 @@ export const darkTheme = createTheme({
     MuiButton: {
       styleOverrides: {
         root: {
-          borderRadius: '5rem', 
-          padding: '1.2rem 2.4rem', // 12px 24px → 1.2rem 2.4rem
+          borderRadius: '5rem',
+          padding: '1rem 4rem',
         },
       },
     },

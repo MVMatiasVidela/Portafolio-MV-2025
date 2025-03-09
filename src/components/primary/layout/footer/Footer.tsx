@@ -27,10 +27,10 @@ const Footer = () => {
           order: { mobile: 1, tablet: 1, laptop: 3 },
         }}
       >
-        <EmailIcon />
-        <LinkedInIcon />
-        <GitHubIcon />
-        <YouTubeIcon />
+        <EmailIcon fontSize="large" />
+        <LinkedInIcon fontSize="large" />
+        <GitHubIcon fontSize="large" />
+        <YouTubeIcon fontSize="large" />
       </Box>
 
       {/* Logo - Aparece en el medio en responsive */}
