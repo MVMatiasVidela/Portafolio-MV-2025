@@ -22,7 +22,7 @@ const Profile = () => {
     <Box
       sx={{
         paddingY: { mobile: '10rem', tablet: '8rem', laptop: '10rem' },
-        paddingX: { mobile: '2rem', tablet: '5rem', laptop: '15rem' },
+        paddingX: { mobile: '5rem', tablet: '5rem', laptop: '15rem' },
         display: 'flex',
         minHeight: '100vh',
         flexDirection: { mobile: 'column', laptop: 'row' },

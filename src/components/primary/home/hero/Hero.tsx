@@ -30,7 +30,7 @@ const Hero: React.FC = () => {
         position: 'relative',
 
         paddingX: {
-          mobile: '2rem',
+          mobile: '5rem',
           tablet: '5rem',
           laptop: '10rem',
           desktop: '10rem',

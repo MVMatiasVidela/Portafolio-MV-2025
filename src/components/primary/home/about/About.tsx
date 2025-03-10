@@ -15,7 +15,7 @@ const About = () => {
         justifyContent: 'space-between',
         alignItems: 'center',
         paddingX: {
-          mobile: '2rem',
+          mobile: '5rem',
           tablet: '5rem',
           laptop: '15rem',
           desktop: '15rem',

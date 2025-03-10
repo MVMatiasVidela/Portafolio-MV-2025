@@ -7,7 +7,7 @@ const Contact = () => {
       sx={{
         paddingBottom: { mobile: '6.25rem', laptop: '10rem', desktop: '10rem' },
         paddingX: {
-          mobile: '1.25rem',
+          mobile: '5rem',
           tablet: '3.125rem',
           laptop: '15rem',
           desktop: '15rem',

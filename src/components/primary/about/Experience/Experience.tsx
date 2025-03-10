@@ -33,12 +33,12 @@ export default function Experience() {
         flexDirection: 'column',
         gap: '2rem',
         paddingX: {
-          mobile: '1.25rem',
+          mobile: '5rem',
           tablet: '3.125rem',
           laptop: '15rem',
         },
         paddingY: {
-          mobile: '3.125rem',
+          mobile: '5rem',
           tablet: '5.625rem',
           laptop: '10rem',
         },

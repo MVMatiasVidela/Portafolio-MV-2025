@@ -12,7 +12,7 @@ const Team = () => {
         alignItems: { mobile: 'center', tablet: 'flex-start' },
         justifyContent: 'space-between',
         padding: {
-          mobile: '3.125rem',
+          mobile: '5rem',
           tablet: '5.625rem',
           laptop: '15rem',
           desktop: '15rem',

@@ -52,7 +52,7 @@ export default function ProyectsHome() {
         alignItems: 'center',
         gap: '2.4rem',
         paddingX: {
-          mobile: '2rem',
+          mobile: '5rem',
           tablet: '5rem',
           laptop: '15rem',
           desktop: '15rem',

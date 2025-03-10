@@ -62,23 +62,23 @@ export default function Stack() {
         display: 'flex',
         flexDirection: 'column',
         gap: '1rem',
-        paddingX: '15rem', 
-        paddingTop: '2.25rem', 
+        paddingX: {
+          mobile: '5rem',
+          tablet: '3.125rem',
+          laptop: '15rem',
+        },
+        paddingTop: '2.25rem',
         paddingBottom: '6.25rem',
         width: '100%',
       }}
     >
       <Box>
-        <Typography
-          variant="h2"
-        >
-          Habilidades y tecnologías
-        </Typography>
+        <Typography variant="h2">Habilidades y tecnologías</Typography>
       </Box>
 
-      <Box >
-        <Grid container spacing={2} >
-          <Grid size={{ laptop: 7, desktop: 8 }}>
+      <Box>
+        <Grid container spacing={2}>
+          <Grid size={{ mobile: 6, laptop: 7, desktop: 8 }}>
             <Item>
               <Box>
                 <Typography variant="h6" sx={{ fontSize: '1.125rem' }}>
@@ -104,7 +104,7 @@ export default function Stack() {
             </Item>
           </Grid>
 
-          <Grid size={{ laptop: 5, desktop: 8 }}>
+          <Grid size={{ mobile: 6, laptop: 5, desktop: 8 }}>
             <Item>
               <Typography variant="h6" sx={{ fontSize: '1.125rem' }}>
                 Herramientas
