@@ -53,24 +53,8 @@ const Contact = () => {
             alignItems: 'center',
           }}
         >
-          <Typography
-            variant="h2"
-            sx={{
-              fontSize: { mobile: '1.5rem', tablet: '2rem', laptop: '2.5rem' },
-            }}
-          >
-            ¿Te interesa mi perfil?
-          </Typography>
-          <Typography
-            variant="h6"
-            sx={{
-              fontSize: {
-                mobile: '0.875rem',
-                tablet: '1rem',
-                laptop: '1.6rem',
-              }, // 14px y 16px con rem
-            }}
-          >
+          <Typography variant="h3">¿Te interesa mi perfil?</Typography>
+          <Typography variant="body2" sx={{ color: 'text.secondary' }}>
             ¡Hablemos y exploremos cómo puedo aportar valor a tu equipo!
           </Typography>
         </Box>
@@ -85,20 +69,10 @@ const Contact = () => {
           }}
         >
           <Link href="" underline="none">
-            <Button
-              variant="contained"
-           
-            >
-              Contáctame
-            </Button>
+            <Button variant="contained">Contáctame</Button>
           </Link>
           <Link href="" underline="none">
-            <Button
-              variant="contained"
-            
-            >
-              Descargar CV
-            </Button>
+            <Button variant="contained">Descargar CV</Button>
           </Link>
         </Box>
       </Box>

@@ -7,7 +7,25 @@ const poppins = Poppins({
   subsets: ['latin'],
   weight: ['400', '500', '600'],
 });
-
+const responsiveTypography = (
+  mobile: string,
+  tablet: string,
+  laptop: string,
+  desktop: string,
+  weight = '400'
+) => ({
+  fontSize: mobile,
+  fontWeight: weight,
+  '@media (min-width:768px)': {
+    fontSize: tablet,
+  },
+  '@media (min-width:1024px)': {
+    fontSize: laptop,
+  },
+  '@media (min-width:1440px)': {
+    fontSize: desktop,
+  },
+});
 export const lightTheme = createTheme({
   palette: {
     mode: 'light',
@@ -24,53 +42,19 @@ export const lightTheme = createTheme({
   },
   typography: {
     fontFamily: poppins.style.fontFamily,
-
-    h1: {
-      fontSize: '5.6rem',
-      fontWeight: 'bold',
-    },
-    h2: {
-      fontSize: '4.8rem',
-      fontWeight: 'bold',
-    },
-    h3: {
-      fontSize: '4rem',
-      fontWeight: 'bold',
-    },
-    h4: {
-      fontSize: '3.2rem',
-      fontWeight: 'bold',
-    },
-    h5: {
-      fontSize: '2.8rem',
-      fontWeight: '400',
-    },
-    h6: {
-      fontSize: '2.4rem',
-      fontWeight: '400',
-    },
-    body1: {
-      fontSize: '1.6rem',
-      fontWeight: '400',
-    },
-    body2: {
-      fontSize: '1.4rem',
-      fontWeight: '400',
-    },
-    button: {
-      fontSize: '1.6rem',
-      fontWeight: '600',
-      textTransform: 'capitalize',
-    },
-    caption1: {
-      fontSize: '1.2rem',
-      fontWeight: '600',
-    },
-    caption2: {
-      fontSize: '1rem',
-      fontWeight: 'normal',
-    },
+    h1: responsiveTypography('3rem', '4rem', '6rem', '6rem', '700'),
+    h2: responsiveTypography('2.8rem', '3.6rem', '4.4rem', '4.8rem', '700'),
+    h3: responsiveTypography('2.4rem', '3rem', '3.6rem', '4rem', '600'),
+    h4: responsiveTypography('2rem', '2.6rem', '3rem', '3.2rem', '600'),
+    h5: responsiveTypography('1.8rem', '2.2rem', '2.6rem', '2.8rem', '500'),
+    h6: responsiveTypography('1.6rem', '2rem', '2.2rem', '2.4rem', '500'),
+    body1: responsiveTypography('1.4rem', '1.6rem', '1.8rem', '2rem', '400'),
+    body2: responsiveTypography('1.2rem', '1.4rem', '1.6rem', '1.8rem', '400'),
+    button: responsiveTypography('1.4rem', '1.6rem', '1.6rem', '2rem', '600'),
+    caption1: responsiveTypography('1.2rem','1.4rem','1.6rem','1.8rem','500'),
+    caption2: responsiveTypography('1rem', '1.2rem', '1.4rem', '1.6rem', '400'),
   },
+
   breakpoints: {
     values: {
       mobile: 0,
@@ -131,67 +115,12 @@ export const darkTheme = createTheme({
     },
     text: {
       primary: '#ffffff',
+      secondary: '#D4E6FD',
     },
   },
 
-  typography: {
-    fontFamily: poppins.style.fontFamily,
-
-    h1: {
-      fontSize: '5.6rem',
-      fontWeight: 'bold',
-    },
-    h2: {
-      fontSize: '4.8rem',
-      fontWeight: 'bold',
-    },
-    h3: {
-      fontSize: '4rem',
-      fontWeight: 'bold',
-    },
-    h4: {
-      fontSize: '3.2rem',
-      fontWeight: 'bold',
-    },
-    h5: {
-      fontSize: '2.8rem',
-      fontWeight: '400',
-    },
-    h6: {
-      fontSize: '2.4rem',
-      fontWeight: '400',
-    },
-    body1: {
-      fontSize: '1.6rem',
-      fontWeight: '400',
-    },
-    body2: {
-      fontSize: '1.4rem',
-      fontWeight: '400',
-    },
-    button: {
-      fontSize: '1.6rem',
-      fontWeight: '600',
-      textTransform: 'capitalize',
-    },
-    caption1: {
-      fontSize: '1.2rem',
-      fontWeight: '600',
-    },
-    caption2: {
-      fontSize: '1rem',
-      fontWeight: 'normal',
-    },
-  },
-
-  breakpoints: {
-    values: {
-      mobile: 0,
-      tablet: 768, // Mejor para cubrir tablets más grandes
-      laptop: 1024, // Compatible con más laptops
-      desktop: 1440, // Estándar para monitores grandes
-    },
-  },
+  typography: lightTheme.typography,
+  breakpoints: lightTheme.breakpoints,
 
   components: {
     MuiButton: {
@@ -233,5 +162,3 @@ export const darkTheme = createTheme({
     },
   },
 });
-
-

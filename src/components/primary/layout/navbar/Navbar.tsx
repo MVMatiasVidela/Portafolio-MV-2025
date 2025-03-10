@@ -33,20 +33,20 @@ const Navbar: React.FC<NavbarProps> = ({ toggleTheme, isDarkMode }) => {
     <Box
       sx={{
         backgroundColor: 'transparent',
-        zIndex: 10,
+        zIndex: 50,
         position: 'fixed',
         top: 0,
         width: '100vw',
         backdropFilter: 'blur(10px)',
         paddingX: {
-          mobile: '2rem', // 20px -> 2rem
-          tablet: '4.8rem', // 48px -> 4.8rem
-          laptop: '4.8rem', // 48px -> 4.8rem
-          desktop: '4.8rem', // 48px -> 4.8rem
+          mobile: '2rem',
+          tablet: '4.8rem',
+          laptop: '4.8rem',
+          desktop: '4.8rem',
         },
         paddingY: {
-          mobile: '2rem', // 20px -> 2rem
-          tablet: '4.8rem', // 48px -> 4.8rem
+          mobile: '2rem',
+          tablet: '4.8rem',
           laptop: '2.4rem',
           desktop: '2.4rem',
         },
@@ -67,36 +67,35 @@ const Navbar: React.FC<NavbarProps> = ({ toggleTheme, isDarkMode }) => {
             laptop: 'flex',
             desktop: 'flex',
           },
-          gap: '3.6rem', // 36px -> 3.6rem
+          gap: '3.6rem',
           alignItems: 'center',
         }}
       >
         <Box
           sx={{
             display: 'flex',
-            gap: '2.4rem', // 24px -> 2.4rem
-            fontSize: '2rem', // 20px -> 2rem
+            gap: '2.4rem',
+            fontSize: '2rem',
             color: 'white',
           }}
         >
-          <Link href="/" className="link">
-            <Typography variant="body1" sx={{ color: '#D4E6FD' }}>
+          <Link href="/">
+            <Typography variant="caption1" sx={{ color: 'text.secondary' }}>
               Inicio
             </Typography>
           </Link>
-          <Link href="/about" className="link">
-            <Typography variant="body1" sx={{ color: '#D4E6FD' }}>
+          <Link href="/about">
+            <Typography variant="caption1" sx={{ color: 'text.secondary' }}>
               Sobre mí
             </Typography>
           </Link>
-          <Link href="#about" className="link">
-            <Typography variant="body1" sx={{ color: '#D4E6FD' }}>
+          <Link href="/proyects">
+            <Typography variant="caption1" sx={{ color: 'text.secondary' }}>
               Proyectos
             </Typography>
           </Link>
         </Box>
 
-        {/* Icono de cambio de tema visible en pantallas grandes */}
         <IconButton onClick={toggleTheme} color="inherit">
           {isDarkMode ? (
             <LightModeIcon fontSize="large" />
@@ -106,7 +105,6 @@ const Navbar: React.FC<NavbarProps> = ({ toggleTheme, isDarkMode }) => {
         </IconButton>
       </Box>
 
-      {/* Icono de menú hamburguesa en móviles */}
       <Box
         sx={{
           display: {
@@ -118,7 +116,6 @@ const Navbar: React.FC<NavbarProps> = ({ toggleTheme, isDarkMode }) => {
           alignItems: 'center',
         }}
       >
-        {/* Icono de cambio de tema en dispositivos móviles */}
         <IconButton onClick={toggleTheme} color="inherit">
           {isDarkMode ? (
             <LightModeIcon fontSize="large" />
@@ -129,36 +126,35 @@ const Navbar: React.FC<NavbarProps> = ({ toggleTheme, isDarkMode }) => {
         <IconButton
           onClick={toggleDrawer(true)}
           color="inherit"
-          sx={{ marginRight: '1rem' }} // Espacio entre el icono y el botón de cambio de tema
+          sx={{ marginRight: '1rem' }}
         >
           <MenuIcon fontSize="large" />
         </IconButton>
       </Box>
 
-      {/* Drawer - Menú hamburguesa */}
       <Drawer
         anchor="right"
         open={open}
         onClose={toggleDrawer(false)}
         sx={{
-          backdropFilter: 'blur(10px)', // Fondo difuso al abrir el menú
+          backdropFilter: 'blur(10px)',
           '& .MuiDrawer-paper': {
-            backgroundColor: 'transparent', // Fondo transparente para el Drawer en sí
-            width: '25rem', // 250px -> 25rem
-            height: '35rem', // 250px -> 25rem
+            backgroundColor: 'transparent',
+            width: '25rem',
+            height: '35rem',
             borderEndStartRadius: '2rem',
             borderTopLeftRadius: '2rem',
             display: 'flex',
             flexDirection: 'column',
-            gap: '2rem', // 20px -> 2rem
-            boxShadow: '0 4px 12px rgba(0, 0, 0, 0.1)', // Sombra para el efecto de profundidad
+            gap: '2rem',
+            boxShadow: '0 4px 12px rgba(0, 0, 0, 0.1)',
           },
         }}
       >
         <Box
           sx={{
-            backgroundColor: isDarkMode ? '#030712' : '#f5f5f5', // Fondo para los ítems de navegación
-            flex: 1, // Asegura que ocupe todo el espacio disponible
+            backgroundColor: isDarkMode ? '#030712' : '#f5f5f5',
+            flex: 1,
             display: 'flex',
             flexDirection: 'column',
             gap: '2rem',
@@ -188,12 +184,12 @@ const Navbar: React.FC<NavbarProps> = ({ toggleTheme, isDarkMode }) => {
               </Link>
             ))}
           </List>
-
-          <Link href="#contact">
+          {/* 
+          <Link href="mailto:matias.damian.vi@gmail.com">
             <Button variant="contained" fullWidth>
               Contáctanos
             </Button>
-          </Link>
+          </Link> */}
         </Box>
       </Drawer>
     </Box>

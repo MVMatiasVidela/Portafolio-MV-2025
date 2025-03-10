@@ -1,5 +1,4 @@
 'use client';
-import WorkOutlineIcon from '@mui/icons-material/WorkOutline';
 import { Box, Typography } from '@mui/material';
 import Circle1 from '@/components/secondary/circles/circles1/Circle1';
 import Foot from '@/assets/svg/Footer.svg';
@@ -34,27 +33,20 @@ export default function Experience() {
         flexDirection: 'column',
         gap: '2rem',
         paddingX: {
-          mobile: '1.25rem', // 20px
-          tablet: '3.125rem', // 50px
-          laptop: '15rem', // 100px
+          mobile: '1.25rem',
+          tablet: '3.125rem',
+          laptop: '15rem',
         },
         paddingY: {
-          mobile: '3.125rem', // 50px
-          tablet: '5.625rem', // 90px
-          laptop: '6.25rem', // 100px
+          mobile: '3.125rem',
+          tablet: '5.625rem',
+          laptop: '10rem',
         },
         position: 'relative',
       }}
     >
       <Box>
-        <Typography
-          variant="h2"
-          sx={{
-            fontSize: { mobile: '1.75rem', tablet: '2.25rem', laptop: '3rem' },
-          }}
-        >
-          Experiencia
-        </Typography>
+        <Typography variant="h2">Experiencia</Typography>
       </Box>
 
       <Box
@@ -72,7 +64,7 @@ export default function Experience() {
             sx={{
               display: 'flex',
               flexDirection: 'column',
-              justifyContent:'start',
+              justifyContent: 'start',
               alignItems: 'start',
               gap: '1rem',
               maxWidth: '100%',
@@ -89,7 +81,7 @@ export default function Experience() {
             </Box>
             <Box>
               <Typography
-                variant="h6"
+                variant="body1"
                 sx={{
                   fontSize: {
                     mobile: '0.875rem',
@@ -97,7 +89,7 @@ export default function Experience() {
                     laptop: '1.6rem',
                   },
                   color: 'text.secondary',
-                  textAlign:'start'
+                  textAlign: 'start',
                 }}
               >
                 {exp.description}
@@ -110,7 +102,7 @@ export default function Experience() {
       <Box
         sx={{
           position: 'absolute',
-          top: '2rem',
+          top: '5rem',
           left: '0',
           zIndex: -1,
         }}
@@ -120,8 +112,18 @@ export default function Experience() {
       <Box
         sx={{
           position: 'absolute',
-          top: '2rem',
+          top: '5rem',
           right: '0',
+          zIndex: -1,
+        }}
+      >
+        <Circle1 />
+      </Box>
+      <Box
+        sx={{
+          position: 'absolute',
+          top: '5rem',
+          right: '35rem',
           zIndex: -1,
         }}
       >

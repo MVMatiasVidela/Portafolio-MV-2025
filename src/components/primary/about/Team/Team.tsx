@@ -10,11 +10,12 @@ const Team = () => {
         display: 'flex',
         flexDirection: { mobile: 'column', tablet: 'row' },
         alignItems: { mobile: 'center', tablet: 'flex-start' },
-        justifyContent: 'center',
+        justifyContent: 'space-between',
         padding: {
-          mobile: '3.125rem', // 50px
-          tablet: '5.625rem', // 90px
-          laptop: '6.25rem', // 100px
+          mobile: '3.125rem',
+          tablet: '5.625rem',
+          laptop: '15rem',
+          desktop: '15rem',
         },
         gap: { mobile: '2rem', tablet: '4rem' },
       }}
@@ -22,21 +23,14 @@ const Team = () => {
       <Box sx={{ maxWidth: { mobile: '100%', laptop: '50%' } }}>
         <Typography
           variant="h2"
-          sx={{
-            fontSize: { mobile: '1.75rem', tablet: '2.25rem', laptop: '3rem' },
-          }}
+         
         >
           Trabajo en equipo
         </Typography>
         <Typography
+        variant='body1'
           sx={{
-            fontSize: {
-              mobile: '0.875rem',
-              tablet: '1rem',
-              laptop: '1.125rem',
-            },
             color: 'text.secondary',
-            marginTop: '1.25rem',
           }}
         >
           Me apasiona trabajar en equipo, ya que creo firmemente en el poder de
@@ -50,11 +44,10 @@ const Team = () => {
         </Typography>
       </Box>
 
-      {/* Imagen y círculos decorativos */}
       <Box
         sx={{
           position: 'relative',
-          maxWidth: { mobile: '100%', laptop: '50%' },
+          width: { mobile: '100%', laptop: '40rem' },
         }}
       >
         <Object3 />
@@ -73,14 +66,14 @@ const Team = () => {
           sx={{
             position: 'absolute',
             top: {
-              mobile: '-15.625rem', // Para móviles
-              tablet: '-12.5rem', // Para tabletas
-              laptop: '19.375rem', // Para laptops
+              mobile: '-15.625rem',
+              tablet: '-12.5rem',
+              laptop: '19rem',
             },
             right: {
-              mobile: '-15.625rem', // Para móviles
-              tablet: '-12.5rem', // Para tabletas
-              laptop: '3.125rem', // Para laptops
+              mobile: '-15.625rem',
+              tablet: '-12.5rem',
+              laptop: '2rem',
             },
             zIndex: -1,
           }}

@@ -60,30 +60,12 @@ const Hero: React.FC = () => {
             gap: '2rem',
           }}
         >
-          <Typography
-            variant="h1"
-            sx={{
-              fontSize: {
-                mobile: '2.4rem',
-                tablet: '3.2rem',
-                laptop: '6rem',
-                desktop: '6rem',
-              },
-              fontWeight: 'bold',
-            }}
-          >
-            Hola! soy Matías Videla
-          </Typography>
+          <Typography variant="h1">Hola! soy Matías Videla</Typography>
 
           <Box className="texto" id="miTexto">
             <Typography
+              variant="body1"
               sx={{
-                fontSize: {
-                  mobile: '1.4rem',
-                  tablet: '1.6rem',
-                  laptop: '2rem',
-                  desktop: '2rem',
-                },
                 color: 'text.secondary',
               }}
             >
@@ -92,7 +74,6 @@ const Hero: React.FC = () => {
             </Typography>
           </Box>
 
-          {/* Botones */}
           <Box
             sx={{
               display: 'flex',

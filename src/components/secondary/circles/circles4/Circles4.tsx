@@ -22,7 +22,7 @@ const Circles4 = () => {
         background:
           theme.palette.mode === 'dark'
             ? 'linear-gradient(135deg, #3B82F6 50%, #14B8A6 80%, #426dcb 50%)' // Gradiente
-            : 'linear-gradient(135deg, #ffffff 20%, #ffffff 20%)', // Color en modo claro
+            : 'linear-gradient(135deg, #426dcb 20%, #426dcb 20%)', // Color en modo claro
         filter: 'blur(70px)', // Filtro de desenfoque
         display: 'block',
         margin: 'auto', // Centrado en el contenedor

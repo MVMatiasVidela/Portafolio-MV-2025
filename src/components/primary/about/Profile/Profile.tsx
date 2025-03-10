@@ -1,6 +1,6 @@
 'use client';
 import { Box, Typography } from '@mui/material';
-import React, { useState } from 'react';
+import { useState } from 'react';
 import Object1 from '@/assets/svg/Object1.svg';
 import Circle2 from '@/components/secondary/circles/circles2/Circle2';
 import GitHubIcon from '@mui/icons-material/GitHub';
@@ -21,25 +21,23 @@ const Profile = () => {
   return (
     <Box
       sx={{
-        paddingY: { mobile: '10rem', tablet: '8rem', laptop: '10rem' }, // 100px -> 10rem, 80px -> 8rem
-        paddingX: { mobile: '2rem', tablet: '5rem', laptop: '15rem' }, // 20px -> 2rem, 50px -> 5rem, 100px -> 10rem
+        paddingY: { mobile: '10rem', tablet: '8rem', laptop: '10rem' },
+        paddingX: { mobile: '2rem', tablet: '5rem', laptop: '15rem' },
         display: 'flex',
         minHeight: '100vh',
         flexDirection: { mobile: 'column', laptop: 'row' },
         alignItems: { mobile: 'center', laptop: 'center' },
         justifyContent: 'space-between',
-        gap: { mobile: '4rem', laptop: '8rem' }, // 40px -> 4rem, 80px -> 8rem
+        gap: { mobile: '4rem', laptop: '8rem' },
       }}
     >
       <Box sx={{ maxWidth: { mobile: '100%', laptop: '65rem' } }}>
         <Box sx={{ display: 'flex', alignItems: 'center', gap: '1.2rem' }}>
-          {' '}
-          {/* 12px -> 1.2rem */}
           <Typography variant="h2">Acerca de mí</Typography>
         </Box>
         <Typography
           variant="body1"
-          sx={{ fontSize: { mobile: '10rem', laptop: '2rem' } }}
+          sx={{  color: 'text.secondary',}}
         >
           Mi recorrido desde Argentina, pasando por Chile, me ha permitido
           adentrarme en el fascinante mundo de la tecnología. Actualmente, me
@@ -48,17 +46,15 @@ const Profile = () => {
           día, cada uno de mis objetivos de manera exitosa.
         </Typography>
         <Box sx={{ display: 'flex', gap: '1.2rem', marginTop: '2rem' }}>
-          {' '}
-          {/* 12px -> 1.2rem, 20px -> 2rem */}
           {socialLinks.map(({ id, icon }) => (
             <Box
               key={id}
               sx={{
                 display: 'flex',
-                gap: '1.2rem', // 12px -> 1.2rem
+                gap: '1.2rem',
                 border: '1px solid',
-                borderRadius: '1rem', // 10px -> 1rem
-                padding: '0.5rem', // 5px -> 0.5rem
+                borderRadius: '1rem',
+                padding: '0.5rem',
                 background: hover === id ? '#1E293B' : '#030712',
                 borderColor: '#282F3C',
                 cursor: 'pointer',
@@ -70,7 +66,6 @@ const Profile = () => {
             </Box>
           ))}
         </Box>
-        {/* <Disp /> */}
       </Box>
       <Box
         sx={{
@@ -82,7 +77,7 @@ const Profile = () => {
         <Box
           sx={{
             position: 'absolute',
-            top: { mobile: '0rem', laptop: '-40rem' }, 
+            top: { mobile: '0rem', laptop: '-40rem' },
             right: '80rem',
             zIndex: -1,
           }}
